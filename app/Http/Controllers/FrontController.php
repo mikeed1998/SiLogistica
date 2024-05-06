@@ -10,8 +10,27 @@ class FrontController extends Controller
         return view('front.index');
     }
 
-    public function admin()
-    {
+    public function admin() {
         return view('front.admin');
+    }
+
+    public function nosotros() {
+        
+    }
+
+    public function contacto() {
+
+    }
+
+    public function servicios() {
+
+    }
+
+    public function servicio($servicio) {
+
+    }
+
+    public function formularioContact() {
+
     }
 }

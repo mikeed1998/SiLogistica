@@ -18,23 +18,23 @@ class LoginController extends Controller
 
     protected function authenticated(Request $request)
     {
-         if(Auth::user()->role_as == '1') 
-         {
-             if ($request->from == 0) {
-                 Auth::logout();
-                 \Toastr::error('Esta no es la ruta para acceder al administrador');
-                 return redirect('/');
-             } else {
-                 \Toastr::success('Has iniciado sesión como administrador');
-                 return redirect('/homeA');
-             }
-         }
-         elseif(Auth::user()->role_as == '1')   
-         {
-             \Toastr::success('Has iniciado sesión');
-             return redirect('/home');
-         }
-     }
+        if(Auth::user()->role_as == '1') 
+        {
+            if ($request->from == 0) {
+                Auth::logout();
+                \Toastr::error('Esta no es la ruta para acceder al administrador');
+                return redirect('/');
+            } else {
+                \Toastr::success('Has iniciado sesión como administrador');
+                return redirect('/homeA');
+            }
+        }
+        elseif(Auth::user()->role_as == '0')   
+        {
+            \Toastr::success('Has iniciado sesión');
+            return redirect('/home');
+        }
+    }
     public function __construct()
     {
         $this->middleware('guest')->except('logout');

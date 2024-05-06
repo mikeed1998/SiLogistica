@@ -8,7 +8,11 @@
 
 
     Route::get('/', 'FrontController@index')->name('front.home');
-
+    Route::get('/nosotros', 'FrontController@nosotros')->name('front.nosotros');
+    Route::get('/contacto', 'FrontController@contacto')->name('front.contacto');
+    Route::get('/servicios', 'FrontController@servicios')->name('front.servicios');
+    Route::get('/servicio/{servicio}', 'FrontController@servicio')->name('front.servicio');
+ 
     Route::get('/admin', 'FrontController@admin')->name('front.admin')->middleware('checkAdminAccess');
 
     Auth::routes();
