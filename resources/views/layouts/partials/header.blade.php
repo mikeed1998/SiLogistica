@@ -1,6 +1,6 @@
 <style>
 
-    @media(min-width: 576px) {
+    @media(min-width: 576px) { 
         .bar-grande {
             display: block;
         }
@@ -46,12 +46,12 @@
                                                 @if (Route::has('login'))
                                                     @auth
                                                         @if(Auth::user()->role_as == 1)
-                                                            <a class="nav-link" href="{{ url('/homeA') }}">Administrador</a>
-                                                        @else // Rol 0 = user
-                                                            <a class="nav-link" href="{{ url('/home') }}">Home</a>
+                                                            <a class="nav-link text-center" href="{{ url('/homeA') }}">Administrador</a>
+                                                        @else
+                                                            <a class="nav-link text-center" href="{{ url('/home') }}">{{ Auth::user()->name }}</a>
                                                         @endif
                                                     @else
-                                                        <a class="nav-link" href="{{ route('login') }}">Iniciar sesión</a>  
+                                                        <a class="nav-link text-center" href="{{ route('login') }}">Iniciar sesión</a>  
                                                     @endauth
                                                 @endif
                                             </div>
@@ -82,9 +82,31 @@
                 </div>
                 <div class="col-12 position-absolute shadow-lg top-0 end-0" id="modal-menu" style="height: 40rem; margin-top: 7.1rem; z-index: 999;">
                     <div class="row">
-                        <div class="col-md-2 col-8 bg-transparent" style="background-color: #003867;"></div>
-                        <div class="col-md-10 col-4 text-center py-5" style="background-color: #003867; border-top: 3px solid #639BE8;">
-                           
+                        <div class="col-md-2 col-8 mt-4" style="background-color: #003867;"></div>
+                        <div class="col-md-10 col-4 text-center py-3 display-4 text-white" style="background-color: #003867; border-top: 3px solid #639BE8;">
+                            <div class="col-9 text-center">
+                                &nbsp;&nbsp;&nbsp;&nbsp;INICIO
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-12 text-center py-3 display-4 text-white" style="background-color: #003867; border-top: 3px solid #639BE8;">
+                            SERVICIOS
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-12 text-center py-3 display-4 text-white" style="background-color: #003867; border-top: 3px solid #639BE8;">
+                            NOSOTROS
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-12 text-center py-3 display-4 text-white" style="background-color: #003867; border-top: 3px solid #639BE8;">
+                            CONTACTO
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-12 text-center py-3 display-4 text-white" style="background-color: #003867; border-top: 3px solid #639BE8;">
+                            RASTREAR GUÍA
                         </div>
                     </div>
                 </div>
@@ -111,7 +133,6 @@
         
     }
 
-    
 </script>
 
 
