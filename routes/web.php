@@ -47,3 +47,5 @@
         });
     });
 
+    Route::patch('/editarajax', 'AJAXController@editarajax');
+

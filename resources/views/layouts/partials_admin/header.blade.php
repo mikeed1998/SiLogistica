@@ -9,7 +9,7 @@
 
         <div class="row px-5">
             <div class="col-md-6 col-12 text-white text-start">
-                Administrador - Brincolines Bambinos
+                Administrador - SiLogisticaGuerrero
             </div>
             <div class="col-md-6 col-12 text-white text-end">
                 <a class="dropdown-item" href="{{ route('logout') }}" onclick="event.preventDefault(); document.getElementById('logout-form').submit();">
