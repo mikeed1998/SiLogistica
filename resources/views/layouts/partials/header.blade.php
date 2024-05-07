@@ -1,23 +1,17 @@
 <style>
 
     @media(min-width: 576px) { 
-        .bar-grande {
-            display: block;
-        }
-
-        .bar-chica {
-            display: none;
-        }
+        .bar-grande { display: block; }
+        .bar-chica { display: none; }
+        .inicio-grande { display: block; }
+        .inicio-chico { display: none; }
     }
 
     @media(min-width: 0px) and (max-width: 576px) {
-        .bar-grande {
-            display: none;
-        }
-
-        .bar-chica {
-            display: block;
-        }
+        .bar-grande { display: none; }
+        .bar-chica { display: block; }
+        .inicio-grande { display: none; }
+        .inicio-chico { display: block; }
     }
 
 </style>
@@ -82,11 +76,16 @@
                 </div>
                 <div class="col-12 position-absolute shadow-lg top-0 end-0" id="modal-menu" style="height: 40rem; margin-top: 7.1rem; z-index: 999;">
                     <div class="row">
-                        <div class="col-md-2 col-8 mt-4" style="background-color: #003867;"></div>
-                        <div class="col-md-10 col-4 text-center py-3 display-4 text-white" style="background-color: #003867; border-top: 3px solid #639BE8;">
+                        <div class="inicio-grande col-md-2 col-8 mt-4" style="background-color: #003867;"></div>
+                        <div class="inicio-grande col-md-10 col-4 text-center py-3 display-4 text-white" style="background-color: #003867; border-top: 3px solid #639BE8;">
                             <div class="col-9 text-center">
                                 &nbsp;&nbsp;&nbsp;&nbsp;INICIO
                             </div>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="inicio-chico mt-5 col-12 text-center py-3 display-4 text-white" style="background-color: #003867; border-top: 3px solid #639BE8;">
+                            INICIO
                         </div>
                     </div>
                     <div class="row">
