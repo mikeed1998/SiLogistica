@@ -25,7 +25,7 @@ class SeccionController extends Controller
     public function show($seccion) {
         $config = Configuracion::first();
 		$seccion = Seccion::where('slug',$seccion)->first();
-        $elements = Elemento::where('seccion',$seccion->id)->get();
+        $elements = Elemento::where('seccion',$seccion->id)->get()->toBase();
         $elem_general = Elemento::all();
         $faqs = Faq::all();
         $politicas = Politica::all();
@@ -41,6 +41,30 @@ class SeccionController extends Controller
         }
 
         return view($ruta, compact('seccion', 'config', 'elem_general', 'faqs', 'politicas', 'elements'));
+    }
+
+    public function textglobalseccion(Request $request){
+        if (empty($request->tabla)) {
+            return false;
+        }
+
+        $nameSpace = '\\App\\';
+        $model = $nameSpace . ucfirst($request->tabla);
+
+        $field = $request->campo;
+        $val = $request->valor;
+        // $model = $model::find($request->id);
+        // $model->$field = $request->valor;
+        // $model->save();
+
+        // $model::find($request->id)->update(["$field" => "$val"]);
+        if ($model::find($request->id)->update(["$field" => "$val"])) {
+            return response()->json(['success'=>true, 'mensaje'=>'Cambio Exitoso']);
+        }else {
+            // code...
+            return response()->json(['success'=>false, 'mensaje'=>'Error al actualizar']);
+        }
+        // return $request->valor;
     }
 
 }
