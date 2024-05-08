@@ -42,7 +42,9 @@
             <div class="col position-relative">
                 <div class="row">
                     <div class="col-lg-2 col-md-2 col-6 d-flex align-items-center justify-content-center text-center" style="height: 10rem;">
-                        <img src="{{ asset('img/photos/header/logo-sin-fondo.png') }}" alt="" class="img-fluid">
+                        <a href="{{ route('front.home') }}" class="btn btn-outline border-0">
+                            <img src="{{ asset('img/photos/header/logo_uno.PNG') }}" alt="" class="img-fluid">
+                        </a>
                     </div>
                     <div class="col bar-grande">
                         <div class="row" style="border-bottom: 3px solid #639BE8;">
@@ -52,9 +54,15 @@
                                     <div class="col-lg-11 col-md-12 mx-auto">
                                         <div class="row d-flex align-items-center justify-content-center">
                                             <div class="col-3 text-white">
-                                                <i class="bi bi-whatsapp fs-3 px-1"></i>
-                                                <i class="bi bi-facebook fs-3 px-1"></i>
-                                                <i class="bi bi-instagram fs-3 px-1"></i>
+                                                <a href="#/" class="text-decoration-none px-1">
+                                                    <i class="bi bi-whatsapp text-white fs-4"></i>
+                                                </a>
+                                                <a href="#/" class="text-decoration-none px-1">
+                                                    <i class="bi bi-facebook text-white fs-4"></i>
+                                                </a>
+                                                <a href="#/" class="text-decoration-none px-1">
+                                                    <i class="bi bi-instagram text-white fs-4"></i>
+                                                </a>
                                             </div>
                                             <div class="col-3 fs-5 text-white fw-bolder">
                                                 @if (Route::has('login'))
@@ -70,10 +78,10 @@
                                                 @endif
                                             </div>
                                             <div class="col-lg-3 col-md-4">
-                                                <button class="btn btn-outline border-white py-3 fs-5 fw-bolder text-white w-100">Rastrear Guía</button>
+                                                <button class="btn btn-outline border-white py-2 fs-5 fw-bolder text-white w-100">Rastrear Guía</button>
                                             </div>
                                             <div class="col-lg-3 col-md-2 text-center text-white">
-                                                <button type="button" onclick="activarModal()" class="btn btn-outline border-0 boton-menu">
+                                                <button type="button" onclick="activarModal(1)" class="btn btn-outline border-0 boton-menu">
                                                     <img src="{{ asset('img/photos/header/menubg.png') }}" alt="" class="img-fluid">
                                                 </button>
                                             </div>
@@ -86,7 +94,7 @@
                     <div class="col bar-chica">
                         <div class="row">
                             <div class="col d-flex align-items-center justify-content-center"  style="height: 10rem;">
-                                <button type="button" onclick="activarModal()" class="btn btn-outline border-0 boton-menu">
+                                <button type="button" onclick="activarModal(1)" class="btn btn-outline border-0 boton-menu">
                                     <img src="{{ asset('img/photos/header/menubg.png') }}" alt="" class="img-fluid">
                                 </button>
                             </div>
@@ -189,13 +197,28 @@
     var navbar_principal = document.getElementById('navbar-principal');
     navbar_principal.style.backgroundColor = '#3567AC';
 
-    function activarModal() {
-        if(menu_modal.style.display == 'block') {
-            menu_modal.style.display = 'none';
-            navbar_principal.style.backgroundColor = '#3567AC';
-        } else {
-            menu_modal.style.display = 'block';
-            navbar_principal.style.backgroundColor = '#003867';
+    function activarModal(x) {
+        if(x == 1) {
+            if(menu_modal.style.display == 'block') {
+                menu_modal.style.display = 'none';
+                navbar_principal.style.backgroundColor = '#3567AC';
+            } else {
+                menu_modal.style.display = 'block';
+                navbar_principal.style.backgroundColor = '#003867';
+            }
+        } else if(x == 2) {
+            window.scrollTo({
+                top: 0,
+                behavior: 'smooth'
+            });
+
+            if (menu_modal.style.display == 'block') {
+                menu_modal.style.display = 'none';
+                navbar_principal.style.backgroundColor = '#3567AC';
+            } else {
+                menu_modal.style.display = 'block';
+                navbar_principal.style.backgroundColor = '#003867';
+            }
         }
         
     }
