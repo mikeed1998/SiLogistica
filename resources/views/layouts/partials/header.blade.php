@@ -42,8 +42,8 @@
             <div class="col position-relative">
                 <div class="row">
                     <div class="col-lg-2 col-md-2 col-6 d-flex align-items-center justify-content-center text-center" style="height: 10rem;">
-                        <a href="{{ route('front.home') }}" class="btn btn-outline border-0">
-                            <img src="{{ asset('img/photos/header/logo_uno.PNG') }}" alt="" class="img-fluid">
+                        <a href="{{ route('front.home') }}">
+                            <img src="{{ asset('img/photos/header/logo-sin-fondo.png') }}" alt="" class="img-fluid">
                         </a>
                     </div>
                     <div class="col bar-grande">
