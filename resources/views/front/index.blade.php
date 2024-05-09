@@ -4,8 +4,14 @@
 
 @section('extracss')
     <style>
+        @font-face {
+            font-family: 'Poppins';
+            src: url('public/font/Poppins-Regular.ttf') format('truetype');
+        }
+
         body {
             background-color: #3567AC; 
+            font-family: 'Poppins', sans-serif;
         }
 
         .principal-slider {
@@ -35,11 +41,22 @@
         .dot-btn {
             cursor: pointer;
         }
+
+        .btn-azul {
+            border: 2px solid #3567AC; 
+            color: #3567AC;
+        }
+
+        .btn-azul:hover {
+            border: 2px solid #3567AC; 
+            color: #FFFFFF;
+            background-color: #3567AC;
+        }
     </style>
 @endsection
 
 @section('content')
-    <section class="slider-principal">
+    <section class="slider-principal py-5">
         <div class="container-fluid">
             <div class="row">
                 <div class="slider_imagenes">
@@ -71,35 +88,176 @@
     </section>
 
     <section class="slider-logos_container">
-        <div class="container-fluid bg-white">
-            <div class="row text-center py-5">
+        <div class="container-fluid" style="background-color: #F6F6F6;">
+            <div class="row text-center py-5 d-flex align-items-center justify-content-center">
                 <div class="slider-logos">
                     <div class="col mx-auto">
-                        <img src="{{ asset('img/photos/home/DHL.png') }}" alt="" class="img-fluid">
+                        <img src="{{ asset('img/photos/home/DHL.png') }}" alt="" class="img-fluid" style="width: 100%; height: 3rem; object-fit: contain;">
                     </div>
                     <div class="col mx-auto">
-                        <img src="{{ asset('img/photos/home/FEDEX.png') }}" alt="" class="img-fluid">
+                        <img src="{{ asset('img/photos/home/FEDEX.png') }}" alt="" class="img-fluid" style="width: 100%; height: 3rem; object-fit: contain;">
                     </div>
                     <div class="col mx-auto">
-                        <img src="{{ asset('img/photos/home/REDPACK.png') }}" alt="" class="img-fluid">
+                        <img src="{{ asset('img/photos/home/REDPACK.png') }}" alt="" class="img-fluid" style="width: 100%; height: 3rem; object-fit: contain;">
                     </div>
                 </div>
-                
             </div>
         </div>
     </section>
 
-    <section class="seccion-nosotros">
-
+    <section class="seccion-nosotros bg-white py-5">
+        <div class="container-fluid">
+            <div class="row">
+                <div class="col">
+                    <div class="row">
+                        <div class="col-md-5 col-12">
+                            <div class="row d-flex align-items-end justify-content-end">
+                                <div class="col-lg-9 col-md-10 col-9 position-relative rounded" style="
+                                    background-image: url('{{ asset('img/photos/home/nosotros.png') }}');
+                                    background-position: center;
+                                    background-repeat: no-repeat;
+                                    background-size: cover;
+                                    height: 36rem;
+                                    ">
+                                    <div class="col-lg-6 col-md-9 col-9 mt-5 ms-5 text-center fs-1 text-white position-absolute top-50 start-0 translate-middle py-3 border border-white border-5" style="background-color: #3567AC; line-height: 1; border-radius: 1rem;">
+                                        <b class="fs-bolder">Logistica</b> Nacional
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-7 col-12">
+                            <div class="row">
+                                <div class="col-11 mx-auto py-5 ">
+                                    <div class="row">
+                                        <div class="col fw-bolder" style="color: #3567AC;">
+                                            SOBRE NOSOTROS
+                                        </div>
+                                    </div>
+                                    <div class="row">
+                                        <div class="col display-2 fw-bolder" style="color: #D0382A;">
+                                            Empresa
+                                        </div>
+                                    </div>
+                                    <div class="row">
+                                        <div class="col display-2 fw-bolder" style="color: #3567AC;">
+                                            &nbsp;&nbsp;&nbsp;100% Mexicana
+                                        </div>
+                                    </div>
+                                    <div class="row">
+                                        <div class="col-12 mx-auto">
+                                            <div class="row">
+                                                <div class="col-11 px-0" style="border-bottom: 0.5rem solid #3567AC;"></div>
+                                                <div class="col-1 px-0">
+                                                    <div class="row">
+                                                        <div class="col-4 py-3" style="background-color: #3567AC;"></div>
+                                                        <div class="col-6"></div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="row">
+                                        <div class="col py-3" style="line-height: 1;">
+                                            SI LOGISTICA es una empresa 100% mexicana que nace en 2019, especializandose en logística y transporte de carga, siendo un proveedor que se adecua a las necesidades de los clientes para garantizar la satisfacción de los mismos (desde su recolección hasta el destino final) y así tener una efectiva cadena de suministros cumpliendo a detalle en tiempo y forma cada uno de los compromisos adquiridos.
+                                        </div>
+                                    </div>
+                                    <div class="row">
+                                        <div class="col-lg-3 col-md-9 col-12">
+                                            <a href="#/" class="btn py-3 fs-5 w-100 btn-azul">VER MÁS</a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>  
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
     </section>
 
     <section class="slider-servicios">
+        <div class="container-fluid py-5" style="background-color: #F6F6F6;">
+            <div class="row">
+                <div class="col">
+                    <div class="row">
+                        <div class="col-11 mx-auto border">
+                            <div class="row">
+                                <div class="col-6">
+                                    <div class="row">
+                                        <div class="col-10 display-4 fw-bolder text-center" style="color: #D0382A;">
+                                            Servicios
+                                        </div>
+                                    </div>
+                                    <div class="row">
+                                        <div class="col-10">
+                                           <div class="row">
+                                                <div class="col-1 px-0">
+                                                    <div class="row">
+                                                        <div class="col-6"></div>
+                                                        <div class="col-6 py-3" style="background-color: #3567AC;"></div>
+                                                    </div>
+                                                </div>
+                                                <div class="col-11 px-0" style="border-bottom: 0.5rem solid #3567AC;"></div>
+                                           </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="col py-5">
+                                    <div class="row">
+                                        <div class="col-lg-3 col-md-4 col-6 border-end border-danger border-2">
+                                            <div class="row">
+                                                <div class="col-11 mx-auto" style="
+                                                    background-image: url('{{ asset('img/photos/home/servicios-img.png') }}');
+                                                    background-position: center;
+                                                    background-repeat: no-repeat;
+                                                    background-size: cover;
+                                                    border: 2px solid #D0382A;
+                                                    height: 16rem;
+                                                    border-top-right-radius: 7rem;
+                                                    border-bottom-left-radius: 7rem;
+                                                "></div>
+                                            </div>
+                                            <div class="row">
+                                                <div class="col mt-4 fs-1 fw-bolder" style="color: #3567AC; line-height: 1;">
+                                                    Entrega puerta a puerta
+                                                </div>
+                                            </div>
+                                            <div class="row">
+                                                <div class="col mt-3" style="text-align: justify; line-height: 1; font-size: 0.9rem;">
+                                                    Lorem, ipsum dolor sit amet consectetur adipisicing elit. Ducimus eaque odio atque! Quae odio culpa explicabo. Iusto saepe ipsum molestias.
+                                                </div>
+                                            </div>
+                                            <div class="row">
+                                                <div class="col fw-bolder" style="color: #D0382A;">
+                                                    Ver más detalles 
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="col-lg-3 col-md-4 col-6 border-end border-danger">
+                                            
+                                        </div>
+                                        <div class="col-lg-3 col-md-4 col-6 border-end border-danger">
 
+                                        </div>
+                                        <div class="col-lg-3 col-md-4 col-6">
+
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
     </section>
 
     <section class="seccion-contacto">
 
     </section>
+
 @endsection
 
 @section('scripts')
@@ -144,6 +302,7 @@
                 dotBtn.src = "{{ asset('img/photos/home/dot.png') }}";
                 dotBtn.alt = "Dot " + (i + 1);
                 dotBtn.classList.add('dot-btn');
+                dotBtn.classList.add('px-1');
                 dotBtn.addEventListener('click', () => {
                     currentSlide = i;
                     showSlide(currentSlide);

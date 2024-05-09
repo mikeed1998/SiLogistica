@@ -25,6 +25,13 @@
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
     <link rel="stylesheet" type="text/css" href="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css"/>
 
+    <style>
+        @font-face {
+            font-family: 'Poppins';
+            src: url('/fonts/Poppins-Regular.ttf') format('truetype');
+        }
+    </style>
+
     @yield('extracss')
 </head>
 <body>
