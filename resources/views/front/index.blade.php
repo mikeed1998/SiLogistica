@@ -595,7 +595,7 @@
                                                 </div>
                                             </div>
                                             <div class="form-group row mt-2">
-                                                <div class="col-lg-5 col-md-8 col-9">
+                                                <div class="col-lg-5 col-md-8 col-10">
                                                     <button type="submit" class="btn btn-outline text-white py-3 w-100">
                                                         <div class="row d-flex align-items-center justify-content-start">
                                                             <div class="col-md-7 col-6 text-start fw-bolder" style="font-size: 0.8rem;">
