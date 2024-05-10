@@ -79,6 +79,30 @@
             color: #FFFFFF;
             background-color: #3567AC;
         }
+
+        .uk-card-primary.uk-card-body .uk-dotnav > .uk-active > *, 
+        .uk-card-primary > :not([class*="uk-card-media"]) .uk-dotnav > .uk-active > *, 
+        .uk-card-secondary.uk-card-body .uk-dotnav > .uk-active > *, 
+        .uk-card-secondary > :not([class*="uk-card-media"]) .uk-dotnav > .uk-active > *, 
+        .uk-light .uk-dotnav > .uk-active > *, .uk-offcanvas-bar .uk-dotnav > .uk-active > *, 
+        .uk-overlay-primary .uk-dotnav > .uk-active > *, 
+        .uk-section-primary:not(.uk-preserve-color) .uk-dotnav > .uk-active > *, 
+        .uk-section-secondary:not(.uk-preserve-color) .uk-dotnav > .uk-active > *, 
+        .uk-tile-primary:not(.uk-preserve-color) .uk-dotnav > .uk-active > *, 
+        .uk-tile-secondary:not(.uk-preserve-color) .uk-dotnav > .uk-active > * {
+            background-color: #3567AC;
+            border-color: #3567AC;
+        }
+
+        .uk-dotnav > :not(.uk-active) > * {
+            background-color: #ACACAC;
+            border-color: #ACACAC;
+        }
+
+        .uk-dotnav > :not(.uk-active) > *:hover {
+            background-color: #D0382A;
+        }
+
     </style>
 @endsection
 
@@ -420,13 +444,20 @@
                                                     </div>
                                                 </div>
                                         
-                                                <a class="uk-position-center-left uk-position-small uk-hidden-hover" href uk-slidenav-previous uk-slider-item="previous"></a>
-                                                <a class="uk-position-center-right uk-position-small uk-hidden-hover" href uk-slidenav-next uk-slider-item="next"></a>
-                                        
+                                                <div class="row py-5">
+                                                    <div class="col-3 text-end">
+                                                        <a href="#/" uk-slider-item="previous"><i class="bi bi-chevron-left fs-4 fw-bold" style="color: #3567AC;"></i></a>
+                                                    </div>
+                                                    <div class="col-6 py-2">
+                                                        <ul class="uk-slider-nav uk-dotnav uk-flex-center uk-margin"></ul>
+                                                    </div>
+                                                    <div class="col-3 text-start">
+                                                        <a href="#/" uk-slider-item="next"><i class="bi bi-chevron-right fs-4 fw-bold" style="color: #3567AC;"></i></a>
+                                                    </div>
+                                                </div>
+
                                             </div>
-                                        
-                                            <ul class="uk-slider-nav uk-dotnav uk-flex-center uk-margin"></ul>
-                                        
+                                            
                                         </div>
 
                                     </div>
