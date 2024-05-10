@@ -37,11 +37,20 @@
                 border-top-right-radius: 7rem;
                 border-bottom-left-radius: 7rem;
             }
+
+            .imagen-contacto {
+                background-position: center;
+                background-repeat: no-repeat;
+                background-size: cover;
+                border-radius: 100%;
+                width: 44rem;
+                height: 44rem;
+            }
         }
 
         @media(min-width: 576px) and (max-width: 992px) {
             .principal-slider {
-                height: 20rem;
+                height: 16
             }
 
             .imagen-servicio {
@@ -49,6 +58,17 @@
                 border: 2px solid #D0382A;
                 border-top-right-radius: 5rem;
                 border-bottom-left-radius: 5rem;
+            }
+
+            .imagen-contacto {
+                background-position: center;
+                background-repeat: no-repeat;
+                background-size: cover;
+                border-radius: 100%;
+                margin-top: -4rem;
+                margin-left: -6rem;
+                width: 30rem;
+                height: 30rem;
             }
         }
 
@@ -62,6 +82,20 @@
                 border: 2px solid #D0382A;
                 border-top-right-radius: 4rem;
                 border-bottom-left-radius: 4rem;
+            }
+
+            .contenedor-imagen_contacto {
+                height: 20rem;
+            }
+
+            .imagen-contacto {
+                background-position: center;
+                background-repeat: no-repeat;
+                background-size: cover;
+                border-radius: 100%;
+                margin-left: 10.5rem;
+                width: 20rem;
+                height: 20rem;
             }
         }
 
@@ -535,9 +569,11 @@
                     <div class="row">
                         <div class="col-11 mx-auto">
                             <div class="row">
-                                <div class="col-md-6 col-12 position-relative">
-                                    <div class="col-12 position-absolute top-50 start-0 translate-middle border py-5">
-                                        <img src="" alt="" class="border">
+                                <div class="col-md-6 col-12 position-relative contenedor-imagen_contacto">
+                                    <div class="col-12 position-absolute top-50 start-0 translate-middle border-dark py-md-5 py-0">
+                                        <div class="imagen-contacto" style="
+                                            background-image: url('{{ asset('img/photos/home/contacto.png') }}');
+                                        "></div>
                                     </div>
                                 </div>
                                 <div class="col-md-6 col-12 px-0">
@@ -562,10 +598,10 @@
                                                 <div class="col-lg-5 col-md-8 col-9">
                                                     <button type="submit" class="btn btn-outline text-white py-3 w-100">
                                                         <div class="row d-flex align-items-center justify-content-start">
-                                                            <div class="col-md-7 col-5 text-start fw-bolder" style="font-size: 0.8rem;">
+                                                            <div class="col-md-7 col-6 text-start fw-bolder" style="font-size: 0.8rem;">
                                                                 Enviar Mensaje
                                                             </div>
-                                                            <div class="col-md-3 col-2 text-start">
+                                                            <div class="col-md-3 col-3 text-start">
                                                                 <img src="{{ asset('img/photos/home/flechita_blanca.png') }}" alt="">
                                                             </div>
                                                         </div>
