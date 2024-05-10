@@ -143,13 +143,19 @@
             <div class="row text-center py-5 d-flex align-items-center justify-content-center">
                 <div class="slider-logos">
                     <div class="col mx-auto">
-                        <img src="{{ asset('img/photos/home/DHL.png') }}" alt="" class="img-fluid" style="width: 100%; height: 3rem; object-fit: contain;">
+                        <img src="{{ asset('img/photos/home/DHL.png') }}" alt="" class="img-fluid p-md-1 p-2" style="width: 100%; height: 3rem; object-fit: contain;">
                     </div>
                     <div class="col mx-auto">
-                        <img src="{{ asset('img/photos/home/FEDEX.png') }}" alt="" class="img-fluid" style="width: 100%; height: 3rem; object-fit: contain;">
+                        <img src="{{ asset('img/photos/home/FEDEX.png') }}" alt="" class="img-fluid p-md-1 p-2" style="width: 100%; height: 3rem; object-fit: contain;">
                     </div>
                     <div class="col mx-auto">
-                        <img src="{{ asset('img/photos/home/REDPACK.png') }}" alt="" class="img-fluid" style="width: 100%; height: 3rem; object-fit: contain;">
+                        <img src="{{ asset('img/photos/home/REDPACK.png') }}" alt="" class="img-fluid p-md-1 p-2" style="width: 100%; height: 3rem; object-fit: contain;">
+                    </div>
+                    <div class="col mx-auto">
+                        <img src="{{ asset('img/photos/home/REDPACK.png') }}" alt="" class="img-fluid p-md-1 p-2" style="width: 100%; height: 3rem; object-fit: contain;">
+                    </div>
+                    <div class="col mx-auto">
+                        <img src="{{ asset('img/photos/home/REDPACK.png') }}" alt="" class="img-fluid p-md-1 p-2" style="width: 100%; height: 3rem; object-fit: contain;">
                     </div>
                 </div>
             </div>
@@ -227,20 +233,20 @@
     </section>
 
     <section class="slider-servicios">
-        <div class="container-fluid py-5" style="background-color: #F6F6F6;">
+        <div class="container-fluid" style="background-color: #F6F6F6;">
             <div class="row">
                 <div class="col">
                     <div class="row">
                         <div class="col-12 mx-auto">
                             <div class="row">
-                                <div class="col-lg-6 col-md-12 col-12">
+                                <div class="col-lg-6 col-md-12 col-12 pt-5">
                                     <div class="row">
                                         <div class="col-10 display-4 fw-bolder text-center" style="color: #D0382A;">
                                             Servicios
                                         </div>
                                     </div>
                                     <div class="row">
-                                        <div class="col-10">
+                                        <div class="col-md-10 col-11 mx-md-0 mx-auto">
                                            <div class="row">
                                                 <div class="col-1 px-0">
                                                     <div class="row">
@@ -255,7 +261,7 @@
                                 </div>
                             </div>
                             <div class="row">
-                                <div class="col py-5">
+                                <div class="col pt-5">
                                     <div class="row">
                                         <div uk-slider>
 
@@ -444,7 +450,7 @@
                                                     </div>
                                                 </div>
                                         
-                                                <div class="row py-5">
+                                                <div class="row py-4 mt-4">
                                                     <div class="col-3 text-end">
                                                         <a href="#/" uk-slider-item="previous"><i class="bi bi-chevron-left fs-4 fw-bold" style="color: #3567AC;"></i></a>
                                                     </div>
@@ -470,8 +476,111 @@
         </div>
     </section>
 
-    <section class="seccion-contacto">
+    <section class="seccion-contacto pt-5 bg-white">
+        <div class="container-fluid pt-5">
+            <div class="row">
+                <div class="col">
+                    <div class="row">
+                        <div class="col-lg-4 col-md-2 col-11 mx-auto">
 
+                        </div>
+                        <div class="col-lg-7 col-md-9 col-11 mx-auto">
+                            <div class="row">
+                                <div class="col-md-9 col-12">
+                                    <div class="row">
+                                        <div class="col fw-bolder" style="color: #3567AC;">
+                                            CONTACTO
+                                        </div>
+                                    </div>
+                                    <div class="row">
+                                        <div class="col display-2 fw-bolder text-start" style="color: #D0382A; line-height: 1;">
+                                            Déjanos
+                                        </div>
+                                    </div>
+                                    <div class="row">
+                                        <div class="col display-2 fw-bolder text-end" style="color: #3567AC; line-height: 1;">
+                                            un Mensaje
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-md-3 col-12">
+                                    
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="col-md-10 col-11 mx-md-0 mx-auto mt-md-0 mt-2">
+                                    <div class="row">
+                                        <div class="col-11" style="border-bottom: 0.5rem solid #3567AC;">
+
+                                        </div>
+                                        <div class="col-1">
+                                            <div class="row">
+                                                <div class="col-6 py-3" style="background-color: #3567AC;"></div>
+                                                <div class="col-6"></div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-2">
+
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-lg-1 col-md-1 col-11 mx-auto"></div>
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-11 mx-auto position-relative pt-5 mt-5" style="background-color: #D0382A; border-top-left-radius: 2rem; border-top-right-radius: 2rem;">
+                    <div class="row">
+                        <div class="col-11 mx-auto">
+                            <div class="row">
+                                <div class="col-md-6 col-12 position-relative">
+                                    <div class="col-12 position-absolute top-50 start-0 translate-middle border py-5">
+                                        <img src="" alt="" class="border">
+                                    </div>
+                                </div>
+                                <div class="col-md-6 col-12 px-0">
+                                    <div class="row py-3">
+                                        <form action="">
+                                            <div class="form-group row">
+                                                <div class="col">
+                                                    <input type="text" class="form-control py-3 shadow-none" placeholder="WHATSAPP">
+                                                </div>
+                                            </div>
+                                            <div class="form-group row mt-4">
+                                                <div class="col">
+                                                    <input type="text" class="form-control py-3 shadow-none" placeholder="EMAIL">
+                                                </div>
+                                            </div>
+                                            <div class="form-group row mt-4">
+                                                <div class="col">
+                                                    <textarea name="" id="" cols="30" rows="4" class="form-control py-3" placeholder="MENSAJE"></textarea>
+                                                </div>
+                                            </div>
+                                            <div class="form-group row mt-2">
+                                                <div class="col-lg-5 col-md-8 col-9">
+                                                    <button type="submit" class="btn btn-outline text-white py-3 w-100">
+                                                        <div class="row d-flex align-items-center justify-content-start">
+                                                            <div class="col-md-7 col-5 text-start fw-bolder" style="font-size: 0.8rem;">
+                                                                Enviar Mensaje
+                                                            </div>
+                                                            <div class="col-md-3 col-2 text-start">
+                                                                <img src="{{ asset('img/photos/home/flechita_blanca.png') }}" alt="">
+                                                            </div>
+                                                        </div>
+                                                    </button>
+                                                </div>
+                                            </div>
+                                        </form>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
     </section>
 
 @endsection
@@ -531,10 +640,44 @@
         });
     </script>
     <script>
+
         $('.slider-logos').slick({
             infinite: true,
+            speed: 300,
             slidesToShow: 4,
-            slidesToScroll: 1
+            slidesToScroll: 1,
+            prevArrow: false,
+            nextArrow: false,
+            responsive: [
+            {
+                breakpoint: 1024,
+                settings: {
+                    slidesToShow: 3,
+                    slidesToScroll: 1,
+                    prevArrow: false,
+                    nextArrow: false,
+                    infinite: true,
+                }
+            },
+            {
+                breakpoint: 600,
+                settings: {
+                    slidesToShow: 2,
+                    slidesToScroll: 2,
+                    prevArrow: false,
+                    nextArrow: false
+                }
+            },
+            {
+                breakpoint: 480,
+                settings: {
+                    slidesToShow: 2,
+                    slidesToScroll: 1,
+                    prevArrow: false,
+                    nextArrow: false
+                }
+            }
+            ]
         });
     </script>
     
