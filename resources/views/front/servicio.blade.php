@@ -18,6 +18,12 @@
         }
 
         @media(min-width: 992px) {
+            .contenedor-nombre_servicio {
+                background-color: #D0382B; 
+                border-top-left-radius: 2rem; 
+                border-top-right-radius: 2rem;
+            }
+
             .imagen-servicio_pri {
                 height: 40rem;
                 border: 6px solid #FFFFFF;
@@ -26,8 +32,6 @@
                 background-size: cover;
                 background-position: center;
                 background-repeat: no-repat;
-                /* margin-left: 10px;
-                margin-right: 10px; */
             }
 
             .imagen-servicio {
@@ -39,6 +43,28 @@
         }
 
         @media(min-width: 576px) and (max-width: 992px) {
+            .contenedor-nombre_servicio {
+                background-color: #D0382B; 
+                border-top-left-radius: 2rem; 
+                border-top-right-radius: 2rem;
+                border-bottom-left-radius: 2rem; 
+                border-bottom-right-radius: 2rem;
+            }
+
+            .contenedor-servicio_imagen {
+                margin-bottom: 36rem;
+            }
+
+            .imagen-servicio_pri {
+                height: 40rem;
+                border: 6px solid #FFFFFF;
+                border-top-right-radius: 20rem;
+                border-bottom-left-radius: 20rem;
+                background-size: cover;
+                background-position: center;
+                background-repeat: no-repat;
+            }
+            
             .imagen-servicio {
                 height: 12rem;
                 border: 2px solid #D0382A;
@@ -48,11 +74,33 @@
         }
 
         @media(min-width: 0px) and (max-width: 576px) {
+            .contenedor-nombre_servicio {
+                background-color: #D0382B; 
+                border-top-left-radius: 2rem; 
+                border-top-right-radius: 2rem;
+                border-bottom-left-radius: 2rem; 
+                border-bottom-right-radius: 2rem;
+            }
+
             .imagen-servicio {
                 height: 10rem;
                 border: 2px solid #D0382A;
                 border-top-right-radius: 4rem;
                 border-bottom-left-radius: 4rem;
+            }
+
+            .contenedor-servicio_imagen {
+                margin-bottom: 16rem;
+            }
+
+            .imagen-servicio_pri {
+                height: 20rem;
+                border: 6px solid #FFFFFF;
+                border-top-right-radius: 10rem;
+                border-bottom-left-radius: 10rem;
+                background-size: cover;
+                background-position: center;
+                background-repeat: no-repat;
             }
         }
 
@@ -85,16 +133,16 @@
 @section('content')
     <div class="container-fluid">
         <div class="row">
-            <div class="col border">
+            <div class="col">
                 <div class="row">
-                    <div class="col-7 border border-warning pt-5">
+                    <div class="col-lg-7 col-12 pt-lg-5 pt-0">
 
                     </div>
-                    <div class="col-5 border border-warning pt-5">
+                    <div class="col-lg-5 col-12 pt-lg-5 pt-0 contenedor-servicio_imagen">
                         <div class="row">
-                            <div class="col-10 mx-auto border pt-3">
+                            <div class="col-10 mx-auto pt-3">
                                 <div class="row">
-                                    <div class="col-11 d-flex align-items-center justify-content-center px-3 border border-dark py-3 display-4 text-start text-white fw-bolder" style="background-color: #D0382B; border-top-left-radius: 2rem; border-top-right-radius: 2rem;">
+                                    <div class="col-lg-11 col-md-12 col-12 contenedor-nombre_servicio d-flex align-items-center justify-content-center px-3 py-3 display-4 text-start text-white fw-bolder">
                                         Nombre<br> &nbsp;&nbsp;&nbsp;del Servicio
                                     </div>
                                 </div>
@@ -105,16 +153,16 @@
             </div>
         </div>
         <div class="row bg-white">
-            <div class="col border">
+            <div class="col">
                 <div class="row">
-                    <div class="col-7 border border-warning py-5 position-relative">
-                        <div class="col-11 position-absolute bottom-0 end-0 imagen-servicio_pri" style="
+                    <div class="col-lg-7 col-md-10 col-10 mx-auto py-5 position-relative">
+                        <div class="col-lg-11 col-md-12 col-12 position-absolute bottom-0 end-0 imagen-servicio_pri" style="
                             background-image: url('{{ asset('img/photos/servicio/servicio.png') }}');
                         "></div>
                     </div>
-                    <div class="col-5 border border-warning py-5">
+                    <div class="col-lg-5 col-md-12 col-12 py-5">
                         <div class="row">
-                            <div class="col-10 mx-auto py-3 border border-dark position-relative">
+                            <div class="col-10 mx-auto py-3 position-relative">
                                 <div class="row">
                                     <div class="col-11" style="color: #3567AC; line-height: 1; font-size: 1.25rem; hyphens:auto;">
                                         SI LOGISTICA es una empresa 100% mexicana que nace en 2019, especializandose en logística y transporte de carga, siendo un proveedor que se adecua a las necesidades de los clientes para garantizar la satisfacción de los mismos (desde su recolección hasta su destino final) y asi tener una efectiva cadena de suministros cumpliendo a detalle en tiempo y forma cada uno de los compromisos adquiridos.
@@ -125,7 +173,7 @@
                         <div class="row mt-4">
                             <div class="col-10 mx-auto">
                                 <div class="row">
-                                    <div class="col-4 px-0">
+                                    <div class="col-lg-4 col-12 px-0">
                                         <a href="#/" class="btn btn-outline text-center w-100 py-3" style="background-color: #3567AC; color: #FFFFFF;">SOLICITAR</a>
                                     </div>
                                 </div>
