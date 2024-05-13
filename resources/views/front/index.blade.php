@@ -144,7 +144,7 @@
     <section class="slider-principal py-5">
         <div class="container-fluid">
             <div class="row">
-                <div class="slider_imagenes">
+                <div class="slider_imagenes px-0">
                     <div>
                         <img class="principal-slider img-fluid" src="{{ asset('img/photos/home/slider_ejemplo.PNG') }}" alt="">
                     </div>
@@ -578,20 +578,29 @@
                                 </div>
                                 <div class="col-md-6 col-12 px-0">
                                     <div class="row py-3">
+                                        <style>
+                                            .form-control::placeholder {
+                                                color: #3567AC;
+                                            }
+
+                                            .form-control {
+                                                padding-left: 1.75rem;
+                                            }
+                                        </style>
                                         <form action="">
                                             <div class="form-group row">
                                                 <div class="col">
-                                                    <input type="text" class="form-control py-3 shadow-none" placeholder="WHATSAPP">
+                                                    <input type="text" class="form-control py-3 shadow-none " placeholder="WHATSAPP" required>
                                                 </div>
                                             </div>
                                             <div class="form-group row mt-4">
                                                 <div class="col">
-                                                    <input type="text" class="form-control py-3 shadow-none" placeholder="EMAIL">
+                                                    <input type="email" class="form-control py-3 shadow-none" placeholder="EMAIL" required>
                                                 </div>
                                             </div>
                                             <div class="form-group row mt-4">
                                                 <div class="col">
-                                                    <textarea name="" id="" cols="30" rows="4" class="form-control py-3" placeholder="MENSAJE"></textarea>
+                                                    <textarea name="" id="" cols="30" rows="4" class="form-control py-3" placeholder="MENSAJE" required></textarea>
                                                 </div>
                                             </div>
                                             <div class="form-group row mt-2">

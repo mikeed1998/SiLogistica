@@ -106,13 +106,13 @@
                         <div class="inicio-grande col-md-2 col-8 mt-4" style="background-color: #003867;"></div>
                         <div class="inicio-grande col-md-10 col-4 text-center py-3 display-4 text-white linea-superior" style="background-color: #003867;">
                             <div class="col-9 text-center">
-                                &nbsp;&nbsp;&nbsp;&nbsp;INICIO
+                                &nbsp;&nbsp;&nbsp;&nbsp;<a href="{{ route('front.home') }}" class="text-decoration-none">INICIO</a>
                             </div>
                         </div>
                     </div>
                     <div class="row">
                         <div class="inicio-chico col-12 text-center py-3 display-4 text-white" style="margin-top: 1.20rem; background-color: #003867; border-top: 3px solid #639BE8;">
-                            INICIO
+                            <a href="{{ route('front.home') }}" class="nav-link">INICIO</a>
                         </div>
                     </div>
                     <div class="row">
@@ -120,7 +120,7 @@
                             <a class="row" href="#/" style="text-decoration: none; color: #FFFFFF;" id="toggleAccordion">
                                 <div class="col-lg-1 col-md-2 col-12" style="background-color: #003867; border-top: 3px solid #639BE8;"></div>
                                 <div class="col-lg-10 col-md-8 col-12 text-center py-3 display-4 text-white" style="background-color: #003867; border-top: 3px solid #639BE8;">
-                                    SERVICIOS 
+                                    SERVICIOS
                                 </div>
                                 <div class="col-lg-1 col-md-2 col-12 d-flex align-items-center justify-content-center linea-superior_servicios" style="background-color: #003867;">
                                     <i class="bi bi-chevron-down fs-3 text-white"></i>
@@ -130,13 +130,13 @@
                         <div class="col-12">
                             <div class="row text-center text-white" style="background-color: #003867;">
                                 <div class="col-12 display-4 accordion-content">
-                                    UNO
+                                    <a href="{{ route('front.servicio', ['servicio' => 1]) }}">UNO</a>
                                 </div>
                                 <div class="col-12 display-4 accordion-content">
-                                    DOS
+                                    <a href="{{ route('front.servicio', ['servicio' => 2]) }}">DOS</a>
                                 </div>
                                 <div class="col-12 display-4 accordion-content">
-                                    TRES
+                                    <a href="{{ route('front.servicio', ['servicio' => 3]) }}">TRES</a>
                                 </div>
                             </div>
                         </div>
@@ -144,12 +144,12 @@
                     
                     <div class="row">
                         <div class="col-12 text-center py-3 display-4 text-white" style="background-color: #003867; border-top: 3px solid #639BE8;">
-                            NOSOTROS
+                            <a href="{{ route('front.nosotros') }}">NOSOTROS</a>
                         </div>
                     </div>
                     <div class="row">
                         <div class="col-12 text-center py-3 display-4 text-white" style="background-color: #003867; border-top: 3px solid #639BE8;">
-                            CONTACTO
+                            <a href="{{ route('front.contacto') }}">CONTACTO</a>
                         </div>
                     </div>
                     <div class="row">

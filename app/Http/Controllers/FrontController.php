@@ -15,19 +15,20 @@ class FrontController extends Controller
     }
 
     public function nosotros() {
-        
+        return view('front.nosotros');
     }
 
     public function contacto() {
-
+        return view('front.contacto');
     }
 
     public function servicios() {
-
+        return view('front.servicios');
     }
 
     public function servicio($servicio) {
-
+        $servicio = 0;
+        return view('front.servicio', compact('servicio'));
     }
 
     public function formularioContact() {
