@@ -14,7 +14,7 @@
         }
 
         .row.bg-transparente::before,
-        .row.bg-transparente::after {
+        .row.bg-transparente::after { 
             content: '';
             position: absolute;
             left: 0;
@@ -35,6 +35,42 @@
             background-color: white; /* Blanco */
         }
 
+        .cont-imagen {
+            background-position: center;
+            background-repeat: no-repeat;
+            background-size: cover;
+            height: 50rem;
+        }
+
+        @media(min-width: 992px) {
+            .row-nosotros {
+                height: 1000px;
+            }
+
+            .cont-imagen {
+                border-top-left-radius: 2rem; 
+                border-bottom-left-radius: 2rem;
+            }
+        }
+
+        @media(min-width: 576px) and (max-width: 992px) {
+            .row-nosotros {
+                height: 800px;
+            }
+
+            .cont-imagen {
+                border-top-left-radius: 2rem; 
+                border-bottom-left-radius: 2rem;
+            }
+        }
+
+        @media(min-width: 0px) and (max-width: 576px) {
+            .cont-imagen {
+                border-top-left-radius: 0rem; 
+                border-bottom-left-radius: 0rem;
+            }
+        }
+
     </style>
 @endsection
 
@@ -44,18 +80,18 @@
             <div class="row">
                 <div class="col">
                     <div class="row bg-transparente">
-                        <div class="col-6">
+                        <div class="col-md-6 col-12">
                             <div class="row" style="background-color: #3567AC;">
                                 <div class="col-10 text-white py-5 mx-auto display-2 fw-bolder text-end border">
                                     Empresa 100% Mexicana
                                 </div>
                             </div>
                             <div class="row">
-                                <div class="col border bg-white" style="height: 33rem;">
+                                <div class="col border bg-white" style="height: 33rem; max-height: 33rem; overflow: auto;">
                                     <div class="row">
                                         <div class="col-10 mx-auto">
                                             <div class="row">
-                                                <div class="col-9 ms-auto py-5" style="line-height: 1; hyphens: auto; text-align: right; font-size: 1rem;">
+                                                <div class="col-lg-9 col-12 ms-auto py-5" style="line-height: 1; hyphens: auto; text-align: right; font-size: 1rem;">
                                                     SI LOGISTICA es una empresa 100% mexcicana que nace en 2019, especializandose en logística y transporte de carga, siendo un proveedor que se adecua a las necesidades de los clientes para garantizar la satisfacción de los mismos (desde su recolección hasta el destino final) y asi tener una efectiva cadena de suministros cumpliendo a detalle en tiempo y forma cada uno de los compromisos adquiridos.
                                                     <br><br>
                                                     Nuestra experiencia nos ha permitido trabajar con empresas líderes en el mercado en México y en el extranjero. El origen de nuestra motivación está en ofrecer a nuestros clientes soluciones a medida en servicios con caja seca, transportando componentes electrónicos, materia prima, producto terminado, alimnetos veterinarios, consumibles de industria farmacéutica, suplementos alimenticios, equipo médico, refacciones automovilísticas, cargas de alto valor (bolsas, calzado) entre otros. Asi como entregas especificas para el sector gobierno.
@@ -66,14 +102,8 @@
                                 </div>
                             </div>
                         </div>
-                        <div class="col-6 border" style="
-                            border-top-left-radius: 2rem; 
-                            border-bottom-left-radius: 2rem;
+                        <div class="col-md-6 col-12 border cont-imagen" style="
                             background-image: url('{{ asset('img/photos/nosotros/nosotros.png') }}');
-                            background-position: center;
-                            background-repeat: no-repeat;
-                            background-size: cover;
-                            height: 50rem;
                         "></div>
                     </div>
                 </div>
@@ -81,7 +111,7 @@
         </div>
     </section>
 
-    <section>
+    {{-- <section>
         <div class="container-fluid bg-white">
             <div class="row">
                 <div class="col py-5 border">
@@ -140,12 +170,62 @@
                 </div>
             </div>
         </div>
-    </section>
+    </section> --}}
 
-    <div class="container-fluid bg-white pt-5">
-        <div class="row" style="background: linear-gradient(to bottom, #FFFFFF 50%, #D0382A 50%);">
+    <div class="container-fluid bg-white border border-dark pt-5">
+        <div class="row border border-dark" style="background: linear-gradient(to bottom, #FFFFFF 50%, #D0382A 50%);">
             <div class="col pt-2 border border-dark rounded-circle bg-white">
-                <div class="row" style="height: 1000px;">
+                <div class="row border border-dark row-nosotros">
+                    <div class="col-md-6 col-12 border border-dark py-5 mt-md-5 mt-0">
+                        <div class="row mt-md-5 mt-0">
+                            <div class="col-lg-6 col-md-11 col-11 mx-auto py-5 border border-primary">
+                                <div class="row">
+                                    <div class="col border border-info display-2 fw-bolder" style="color: #D0382A;">
+                                        &nbsp;Misión
+                                    </div>
+                                </div>
+                                <div class="row border border-info">
+                                    <div class="col-11" style="border-bottom:5px solid #3567AC;"></div>
+                                    <div class="col-1">
+                                        <div class="row">
+                                            <div class="col-3"></div>
+                                            <div class="col-9 pt-4" style="background-color: #3567AC;"></div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="row">
+                                    <div class="col border border-info py-3" style="hyphens: auto; text-align: justify; line-height: 1;">
+                                        Lorem ipsum Lorem ipsum dolor sit amet consectetur adipisicing elit. odit at. Et pariatur sunt adipisci magni. dolor sit amet consectetur adipisicing elit. Inventore neque unde sed eum voluptatem nam? Cum maiores totam officiis repellat?  
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-6 col-12 border border-dark py-5 mt-md-5 mt-0">
+                        <div class="row mt-md-5 mt-0">
+                            <div class="col-lg-6 col-md-11 col-11 mx-auto py-5 border border-primary">
+                                <div class="row">
+                                    <div class="col border border-info display-2 fw-bolder" style="color: #D0382A;">
+                                        &nbsp;Visión
+                                    </div>
+                                </div>
+                                <div class="row border border-info">
+                                    <div class="col-11" style="border-bottom:5px solid #3567AC;"></div>
+                                    <div class="col-1">
+                                        <div class="row">
+                                            <div class="col-3"></div>
+                                            <div class="col-9 pt-4" style="background-color: #3567AC;"></div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="row">
+                                    <div class="col border border-info py-3" style="hyphens: auto; text-align: justify; line-height: 1;">
+                                        Lorem ipsum Lorem ipsum dolor sit amet consectetur adipisicing elit. odit at. Et pariatur sunt adipisci magni. dolor sit amet consectetur adipisicing elit. Inventore neque unde sed eum voluptatem nam? Cum maiores totam officiis repellat?  
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
                     <div class="col-6 mx-auto py-2 border border-primary position-relative">
                         <div class="col-12 position-absolute bottom-0 start-0 border border-warning">
                             <img src="{{ asset('img/photos/nosotros/nosotros_stockchida.png') }}" alt="" class="img-fluid">
@@ -155,9 +235,7 @@
             </div>
         </div>
         <div class="row">
-            <div class="col py-5 border" style="background-color: #D0382A;">
-
-            </div>
+            <div class="col py-5 border" style="background-color: #D0382A;"></div>
         </div>
     </div>
 
