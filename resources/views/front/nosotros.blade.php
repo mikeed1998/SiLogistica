@@ -231,8 +231,8 @@
                         </div>
                     </div>
                     <div class="col-6 mx-auto py-2 border border-primary position-relative" style="z-index: 0;">
-                        <div class="col-12 position-absolute bottom-0 start-0 border border-warning" style="z-index: -1;">
-                            <img src="{{ asset('img/photos/nosotros/nosotros_stockchida.png') }}" alt="" class="img-fluid">
+                        <div class="col-12 position-absolute bottom-0 start-0 border border-warning" style="z-index: -2;">
+                            <img src="{{ asset('img/photos/nosotros/nosotros_stockchida.png') }}" alt="" class="img-fluid border" style="border-bottom-left-radius: 250px; border-bottom-right-radius: 250px;">
                         </div>
                     </div>
                 </div>
