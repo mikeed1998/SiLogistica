@@ -65,6 +65,10 @@
         }
 
         @media(min-width: 0px) and (max-width: 576px) {
+            .row-nosotros {
+                height: 1000px;
+            }
+
             .cont-imagen {
                 border-top-left-radius: 0rem; 
                 border-bottom-left-radius: 0rem;
@@ -173,7 +177,7 @@
     </section> --}}
 
     <div class="container-fluid bg-white border border-dark pt-5">
-        <div class="row border border-dark" style="background: linear-gradient(to bottom, #FFFFFF 50%, #D0382A 50%);">
+        <div class="row border border-dark" style="background: linear-gradient(to bottom, #FFFFFF 50%, #D0382A 50%); position: relative; z-index: 1;">
             <div class="col pt-2 border border-dark rounded-circle bg-white">
                 <div class="row border border-dark row-nosotros">
                     <div class="col-md-6 col-12 border border-dark py-5 mt-md-5 mt-0">
@@ -226,8 +230,8 @@
                             </div>
                         </div>
                     </div>
-                    <div class="col-6 mx-auto py-2 border border-primary position-relative">
-                        <div class="col-12 position-absolute bottom-0 start-0 border border-warning">
+                    <div class="col-6 mx-auto py-2 border border-primary position-relative" style="z-index: 0;">
+                        <div class="col-12 position-absolute bottom-0 start-0 border border-warning" style="z-index: -1;">
                             <img src="{{ asset('img/photos/nosotros/nosotros_stockchida.png') }}" alt="" class="img-fluid">
                         </div>
                     </div>
