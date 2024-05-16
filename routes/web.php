@@ -5,13 +5,16 @@
     use Illuminate\App\Http\Controllers\SeccionController;
     use Illuminate\App\Http\Controllers\AJAXController;
     use Illuminate\App\Http\Controllers\Auth\LoginController;
+    use Illuminate\App\Http\Controllers\SliderPrincipalController;
+    use Illuminate\App\Http\Controllers\EmpresaController;
+    use Illuminate\App\Http\Controllers\ServicioController;
 
 
     Route::get('/', 'FrontController@index')->name('front.home');
     Route::get('/nosotros', 'FrontController@nosotros')->name('front.nosotros');
     Route::get('/contacto', 'FrontController@contacto')->name('front.contacto');
     Route::get('/servicios', 'FrontController@servicios')->name('front.servicios');
-    Route::get('/servicio/{servicio}', 'FrontController@servicio')->name('front.servicio');
+    Route::get('/servicio_detalle/{servicio}', 'FrontController@servicio')->name('front.servicio');
  
     Route::get('/admin', 'FrontController@admin')->name('front.admin')->middleware('checkAdminAccess');
 
@@ -41,6 +44,27 @@
             Route::delete('/destoy','FAQController@destroy')->name('destroy');
         });
 
+        Route::prefix('slider')->name('slider.')->group(function(){
+            Route::get('/', 'SliderController@index')->name('slider.index');
+            Route::post('/post', 'SliderController@post')->name('slider.post');
+            Route::delete('/destroy/{slider}', 'SliderController@destroy')->name('slider.destroy');
+        });
+
+        Route::prefix('empresa')->name('empresa.')->group(function(){
+            Route::get('/', 'EmpresaController@index')->name('empresa.index');
+            Route::post('/post', 'EmpresaController@post')->name('empresa.post');
+            Route::delete('/destroy/{empresa}', 'EmpresaController@destroy')->name('empresa.destroy');
+        });
+
+        Route::prefix('servicio')->name('servicio.')->group(function(){
+            Route::get('/', 'ServicioController@index')->name('servicio.index');
+            Route::get('/create', 'ServicioController@create')->name('servicio.create');
+            Route::post('/store', 'ServicioController@store')->name('servicio.store');
+            Route::get('/edit/{servicio}', 'ServicioController@edit')->name('servicio.edit');
+            Route::put('/update{servicio}', 'ServicioController@update')->name('servicio.update');
+            Route::delete('/destroy/{servicio}', 'ServicioController@destroy')->name('servicio.destroy');
+        });
+
         Route::prefix('secciones')->name('seccion.')->group(function(){
             Route::get('/','SeccionController@index')->name('index');
 			Route::get('/{slug}','SeccionController@show')->name('show');
@@ -48,4 +72,6 @@
     });
 
     Route::patch('/editarajax', 'AJAXController@editarajax');
+
+
 

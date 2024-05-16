@@ -31,7 +31,7 @@
         </div>
         <div class="row mt-5">
             <div class="col-6 mx-auto">
-                <a href="{{ route('servicio.servicio.create') }}" class="btn btn-dark w-100">Crear nuevo</a>
+                <a href=""></a>
             </div>
         </div>
     </div>
