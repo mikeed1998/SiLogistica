@@ -21,23 +21,23 @@ class ServicioController extends Controller
 
     public function store(Request $request) {
 
-        dd($request);
-
         $servicio = new Servicio;
 
-        $file_servicio = $request->file('archivo');
+        $file_servicio = $request->file('servicio_portada');
 
         $extension_servicio = $file_servicio->getClientOriginalExtension();
         $namefile_servicio = Str::random(30) . '.' . $extension_servicio;
 
-        \Storage::disk('local')->put("img/servicios/" . $namefile_servicio, \File::get($file_servicio));
+        \Storage::disk('local')->put("img/photos/servicios/" . $namefile_servicio, \File::get($file_servicio));
 
+        $servicio->titulo = $request->servicio_titulo;
+        $servicio->descripcion = $request->servicio_descripcion;
         $servicio->portada = $namefile_servicio;
 
         $servicio->save();
 
-        \Toastr::success('Categoría añadida');
-        return redirect()->back();
+        \Toastr::success('Servicio añadido');
+        return redirect()->route('seccion.show', ['slug' => 'servicios']);
     }
 
     public function edit(Servicio $servicios) {

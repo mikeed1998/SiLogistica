@@ -34,6 +34,23 @@
                 <a href="{{ route('servicio.servicio.create') }}" class="btn btn-dark w-100">Crear nuevo</a>
             </div>
         </div>
+        <div class="row mt-5">
+            @forelse ($servicios as $serv)
+                <div class="col-12">
+                    <div class="card">
+                        <img src="{{ asset('img/photos/servicios/'.$serv->portada) }}" alt="" class="img-fluid">
+                        <div class="card-body">
+                            <div class="card-title">{{ $serv->titulo }}</div>
+                            <div class="card-body">{{ $serv->descripcion }}</div>
+                        </div>
+                    </div>
+                </div>
+            @empty
+                <div>
+                    No hay servicios
+                </div>
+            @endforelse
+        </div>
     </div>
 
 @endsection
