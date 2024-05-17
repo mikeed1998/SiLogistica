@@ -40,7 +40,7 @@
                     <div class="card">
                         <div class="row">
                             <div class="col-2">
-                                <img src="{{ asset('img/photos/servicios/'.$serv->portada) }}" alt="" class="img-fluid" style="object-fit: contain;">
+                                <img src="{{ asset('img/photos/servicios/'.$serv->portada) }}" alt="" class="img-fluid" style="height: 100px;">
                             </div>
                             <div class="col-8">
                                 <div class="row d-flex align-items-center justify-content-center h-100">
@@ -105,18 +105,17 @@
                                     <div class="col-12">
                                         <button type="button" class="btn btn-dark w-100 rounded-0" data-bs-toggle="modal" data-bs-target="#staticBackdrop-{{ $serv->id }}"><i class="bi bi-eye"></i> Detalle</button>
                                         <div class="modal fade" id="staticBackdrop-{{ $serv->id }}" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel-{{ $serv->id }}" aria-hidden="true">
-                                            <div class="modal-dialog">
+                                            <div class="modal-dialog modal-xl">
                                                 <div class="modal-content">
                                                     <div class="modal-header">
-                                                        <h1 class="modal-title fs-5" id="staticBackdropLabel-{{ $serv->id }}">Modal title</h1>
+                                                        <h1 class="modal-title fs-5" id="staticBackdropLabel-{{ $serv->id }}">Detalle del servicio: {{ $serv->titulo }}</h1>
                                                         <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
                                                     </div>
                                                     <div class="modal-body">
                                                         {!! $serv->descripcion !!}
                                                     </div>
                                                     <div class="modal-footer">
-                                                        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
-                                                        <button type="button" class="btn btn-primary">Understood</button>
+                                                        <button type="button" class="btn btn-danger w-100 rounded-0" data-bs-dismiss="modal">Cerrar detalles</button>
                                                     </div>
                                                 </div>
                                             </div>
