@@ -72,6 +72,8 @@
     });
 
     Route::patch('/editarajax', 'AJAXController@editarajax');
+    Route::post('/switch_inicio', 'AJAXController@switch_inicio')->name('ajax.switch_inicio');
+
 
 
 
