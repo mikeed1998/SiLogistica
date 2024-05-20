@@ -31,6 +31,8 @@ class SeccionController extends Controller
         $elements = Elemento::where('seccion',$seccion->id)->get()->toBase();
         $elem_general = Elemento::all();
         $faqs = Faq::all();
+        $sliders = SliderPrincipal::all();
+        $empresas = Empresa::all();
         $politicas = Politica::all();
         $servicios = Servicio::all();
 
@@ -44,7 +46,7 @@ class SeccionController extends Controller
             $ruta = 'config.secciones.'.$seccion->seccion;
         }
 
-        return view($ruta, compact('seccion', 'config', 'elem_general', 'faqs', 'politicas', 'elements', 'servicios'));
+        return view($ruta, compact('seccion', 'config', 'elem_general', 'faqs', 'politicas', 'elements', 'servicios', 'sliders', 'empresas'));
     }
 
     public function textglobalseccion(Request $request){

@@ -4,6 +4,8 @@
 /storage/*.key
 /vendor
 /public/img/photos/servicios/
+/public/img/photos/sliders/
+/public/img/photos/empresas/
 .env
 .env.backup
 .phpunit.result.cache

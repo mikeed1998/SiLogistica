@@ -45,14 +45,14 @@
         });
 
         Route::prefix('slider')->name('slider.')->group(function(){
-            Route::get('/', 'SliderController@index')->name('slider.index');
-            Route::post('/post', 'SliderController@post')->name('slider.post');
-            Route::delete('/destroy/{slider}', 'SliderController@destroy')->name('slider.destroy');
+            Route::get('/', 'SliderPrincipalController@index')->name('slider.index');
+            Route::post('/store', 'SliderPrincipalController@store')->name('slider.store');
+            Route::delete('/destroy/{slider}', 'SliderPrincipalController@destroy')->name('slider.destroy');
         });
 
         Route::prefix('empresa')->name('empresa.')->group(function(){
             Route::get('/', 'EmpresaController@index')->name('empresa.index');
-            Route::post('/post', 'EmpresaController@post')->name('empresa.post');
+            Route::post('/store', 'EmpresaController@store')->name('empresa.store');
             Route::delete('/destroy/{empresa}', 'EmpresaController@destroy')->name('empresa.destroy');
         });
 

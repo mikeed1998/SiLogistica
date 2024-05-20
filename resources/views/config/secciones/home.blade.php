@@ -23,6 +23,14 @@
         <a href="{{ route('front.admin') }}" class="mt-5 col col-md-2 btn btn-sm btn-dark mr-auto"><i class="fa fa-reply"></i> Regresar</a>
     </div>
 
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col-12">
+                
+            </div>
+        </div>
+    </div>
+
 @endsection
 
 @section('extraJS')
