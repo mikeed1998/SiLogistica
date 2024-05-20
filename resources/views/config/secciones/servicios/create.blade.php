@@ -44,7 +44,7 @@
                         <textarea id="summernote" name="servicio_descripcion" cols="30" rows="10" required></textarea>
                     </div>
                     <div class="col-12 py-2">
-                        <label for="servicio_portada" class="form-control-label fs-5">Nombre del servicio</label>
+                        <label for="servicio_portada" class="form-control-label fs-5">Portada del servicio</label>
                         <input type="file" id="servicio_portada" name="servicio_portada" class="form-control shadow-none" placeholder="Portad del servicio" accept="image/png, image/gif, image/jpeg" required>
                     </div>
                     <div class="col-12 py-2">

@@ -61,7 +61,7 @@
             Route::get('/create', 'ServicioController@create')->name('servicio.create');
             Route::post('/store', 'ServicioController@store')->name('servicio.store');
             Route::get('/edit/{servicio}', 'ServicioController@edit')->name('servicio.edit');
-            Route::put('/update{servicio}', 'ServicioController@update')->name('servicio.update');
+            Route::put('/update/{servicio}', 'ServicioController@update')->name('servicio.update');
             Route::delete('/destroy/{servicio}', 'ServicioController@destroy')->name('servicio.destroy');
         });
 

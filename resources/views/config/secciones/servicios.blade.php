@@ -122,13 +122,16 @@
                                         </div>
                                     </div>
                                     <div class="col-12">
-                                        <button type="button" class="btn btn-info w-100 rounded-0"><i class="bi bi-book"></i> Editar</button>
+                                        <a href="{{ route('servicio.servicio.edit', ['servicio' => $serv->id]) }}" class="btn btn-info w-100 rounded-0"><i class="bi bi-book"></i> Editar</a>
                                     </div>
                                     <div class="col-12">
-                                        <button type="button" class="btn btn-danger w-100 rounded-0"><i class="bi bi-trash"></i> Eliminar</button>
+                                        <form action="{{ route('servicio.servicio.destroy', ['servicio' => $serv->id]) }}" method="POST" enctype="multipart/form-data" class="delete-form" id="form-{{ $serv->id }}">
+                                            @csrf
+                                            @method('DELETE')
+                                            <button type="submit" class="btn btn-danger w-100 rounded-0"><i class="bi bi-trash"></i> Eliminar</button>
+                                        </form>
                                     </div>
                                 </div>
-                                {{-- <div class="card-body">{!! $serv->descripcion !!}</div> --}}
                             </div>
                         </div>
                         
@@ -146,6 +149,31 @@
 @endsection
 
 @section('extraJS')
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+    <script>
+        document.addEventListener('DOMContentLoaded', function () {
+            const forms = document.querySelectorAll('.delete-form');
 
+            forms.forEach(function (form) {
+                form.addEventListener('submit', function (event) {
+                    event.preventDefault();
+                    Swal.fire({
+                        title: '¿Estás seguro?',
+                        text: "¡No podrás revertir esto!",
+                        icon: 'warning',
+                        showCancelButton: true,
+                        confirmButtonColor: '#3085d6',
+                        cancelButtonColor: '#d33',
+                        confirmButtonText: 'Sí, eliminar!',
+                        cancelButtonText: 'Cancelar'
+                    }).then((result) => {
+                        if (result.isConfirmed) {
+                            form.submit();
+                        }
+                    });
+                });
+            });
+        });
+    </script>
 @endsection
 
