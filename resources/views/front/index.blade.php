@@ -350,7 +350,7 @@
                                                             </div>
                                                             <div class="row">
                                                                 <div class="col mt-4 fs-1 fw-bolder" style="color: #3567AC; line-height: 1;">
-                                                                    Entrega puerta a puerta
+                                                                    Servicio con cita
                                                                 </div>
                                                             </div>
                                                             <div class="row">
@@ -386,7 +386,7 @@
                                                             </div>
                                                             <div class="row">
                                                                 <div class="col mt-4 fs-1 fw-bolder" style="color: #3567AC; line-height: 1;">
-                                                                    Entrega puerta a puerta
+                                                                    Unidades dedicadas
                                                                 </div>
                                                             </div>
                                                             <div class="row">
@@ -422,7 +422,7 @@
                                                             </div>
                                                             <div class="row">
                                                                 <div class="col mt-4 fs-1 fw-bolder" style="color: #3567AC; line-height: 1;">
-                                                                    Entrega puerta a puerta
+                                                                    FTL (Full Track Load)
                                                                 </div>
                                                             </div>
                                                             <div class="row">

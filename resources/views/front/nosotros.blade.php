@@ -180,9 +180,9 @@
         </div>
     </section> --}}
 
-    <div class="container-fluid bg-white pt-5">
+    <div class="container-fluid">
         <div class="row" style="background: linear-gradient(to bottom, #FFFFFF 50%, #D0382A 50%); position: relative; z-index: 1;">
-            <div class="col pt-2 rounded-circle bg-white">
+            <div class="col rounded-circle bg-white">
                 <div class="row row-nosotros">
                     <div class="col-md-6 col-12 py-5 mt-md-5 mt-0">
                         <div class="row mt-md-5 mt-0">
@@ -243,7 +243,7 @@
             </div>
         </div>
         <div class="row">
-            <div class="col py-5 border" style="background-color: #D0382A;"></div>
+            <div class="col py-5" style="background-color: #D0382A;"></div>
         </div>
     </div>
 
