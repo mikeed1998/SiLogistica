@@ -78,7 +78,7 @@
                         <div style="
                             background-image: url('{{ asset('img/photos/empresas/'.$empresa->imagen) }}');
                             background-color: #000000;
-                            background-size: cover;
+                            background-size: contain;
                             background-position: center;
                             background-repeat: no-repeat;
                             width: 100%;
@@ -95,7 +95,7 @@
                     </div>
                 </div>  
             @empty
-                <div class="card w-100">No hay imágenes en el empresa</div>
+                <div class="card w-100 text-center py-3">No hay imágenes en el empresa</div>
             @endforelse
         </div>
     </div>

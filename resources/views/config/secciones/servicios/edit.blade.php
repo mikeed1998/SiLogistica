@@ -49,7 +49,7 @@
                         <input type="file" id="servicio_portada" name="servicio_portada" value="{{ $servicio->portada }}" class="form-control shadow-none" placeholder="Portad del servicio" accept="image/png, image/gif, image/jpeg">
                     </div>
                     <div class="col-12 py-2">
-                        <input type="submit" class="btn btn-dark w-100 rounded-0" value="Guardar nuevo servicio">
+                        <input type="submit" class="btn btn-dark w-100 rounded-0" value="Guardar modificaciones">
                     </div>
                 </form>
             </div>

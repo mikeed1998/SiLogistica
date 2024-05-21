@@ -34,7 +34,7 @@ class EmpresaController extends Controller
     }
 
     public function destroy(Empresa $empresa) {
-        $img = 'img/photos/empresas /'.$empresa->imagen;
+        $img = 'img/photos/empresas/'.$empresa->imagen;
         unlink($img);
         $empresa->delete();
         \Toastr::success('Imágen eliminada');

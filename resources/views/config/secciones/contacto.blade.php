@@ -223,21 +223,21 @@
                                     <div class="col-lg-4 col-md-10 col-12 mx-auto">
                                         <div class="row">
                                             <div class="col-12 mx-auto py-lg-0 py-2">
-                                                <i class="bi bi-envelope-fill"></i> contacto@silogistica.com
+                                                <i class="bi bi-envelope-fill"></i> {{ $config->destinatario }}
                                             </div>
                                         </div>
                                     </div>
                                     <div class="col-lg-4 col-md-10 col-12 mx-auto">
                                         <div class="row">
                                             <div class="col-12 mx-auto py-lg-0 py-2">
-                                                <i class="bi bi-telephone-fill"></i> TEL. 3329768968
+                                                <i class="bi bi-telephone-fill"></i> TEL. {{ $config->whatsapp }}
                                             </div>
                                         </div>
                                     </div>
                                     <div class="col-lg-4 col-md-9 col-12 mx-auto">
                                         <div class="row">
                                             <div class="col-12 ms-auto text-lg-end text-center py-md-0 py-2">
-                                                Av. Lazáro Cárdenas #33097 Chapalita C.P. 44500 Guadalajara, Jal.
+                                                {{ $config->direccion }}
                                             </div>
                                         </div>
                                     </div>

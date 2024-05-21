@@ -23,7 +23,7 @@
         <a href="{{ route('front.admin') }}" class="mt-5 col col-md-2 btn btn-sm btn-dark mr-auto"><i class="fa fa-reply"></i> Regresar</a>
     </div>
 
-    <div class="container-fluid">
+    <div class="container-fluid mb-5">
         <div class="row">
             <div class="col display-5 text-center fw-bolder">
                 Servicios   
@@ -37,10 +37,19 @@
         <div class="row mt-5">
             @forelse ($servicios as $serv)
                 <div class="col-12">
-                    <div class="card">
+                    <div class="card border border-dark">
                         <div class="row">
                             <div class="col-2">
-                                <img src="{{ asset('img/photos/servicios/'.$serv->portada) }}" alt="" class="img-fluid" style="height: 100px;">
+                                {{-- <img src="{{ asset('img/photos/servicios/'.$serv->portada) }}" alt="" class="img-fluid" style="height: 100px; object-fit: cover;"> --}}
+                                <div style="
+                                    background-image: url('{{ asset('img/photos/servicios/'.$serv->portada) }}');
+                                    background-color: #000000;
+                                    background-size: cover;
+                                    background-repeat: no-repeat;
+                                    background-position: center;
+                                    height: 100%;
+                                    width: 100%;
+                                "></div>
                             </div>
                             <div class="col-8">
                                 <div class="row d-flex align-items-center justify-content-center h-100">

@@ -168,9 +168,11 @@
                     <div class="row bg-transparente">
                         <div class="col-md-6 col-12">
                             <div class="row" style="background-color: #3567AC;">
-                                <div class="col-10 text-white py-5 mx-auto display-2 fw-bolder text-end">
-                                    <input name="" id="" class="form-control bg-transparent border border-dark rounded-0 text-white" value="{{ $elem_general[6]->texto }}">
-                                        
+                                <div class="col-10 text-white py-5 mx-auto display-2 fw-bolder text-center">
+                                    {{-- <input name="" id="" class="form-control bg-transparent border border-dark rounded-0 text-white" value=""> --}}
+                                    <textarea name="" id="" cols="30" rows="3" class="form-control bg-transparent border border-dark fs-4 rounded-0 text-white text-start editarajax" data-id="{{ $elem_general[6]->id }}" data-model="Elemento" data-field="texto">
+                                        {{ $elem_general[6]->texto }}
+                                    </textarea>
                                 </div>
                             </div>
                             <div class="row">
@@ -179,7 +181,7 @@
                                         <div class="col-10 mx-auto">
                                             <div class="row">
                                                 <div class="col-lg-12 col-12 text-md-end text-center ms-auto py-5" style="line-height: 1; hyphens: auto; text-align: right; font-size: 1rem;">
-                                                    <textarea name="" id="" cols="30" rows="16" class="form-control border border-dark rounded-0">
+                                                    <textarea name="" id="" cols="30" rows="16" class="form-control border border-dark rounded-0 editarajax" data-id="{{ $elem_general[7]->id }}" data-model="Elemento" data-field="texto">
                                                         {{ $elem_general[7]->texto }}
                                                     </textarea>
                                                 </div>
@@ -236,7 +238,7 @@
                                 </div>
                                 <div class="row">
                                     <div class="col py-3" style="hyphens: auto; text-align: justify; line-height: 1;">
-                                        <textarea name="" id="" cols="30" rows="6" class="form-control border border-dark rounded-0">
+                                        <textarea name="" id="" cols="30" rows="6" class="form-control border border-dark rounded-0 editarajax" data-id="{{ $elem_general[10]->id }}" data-model="Elemento" data-field="texto">
                                             {{ $elem_general[10]->texto }}
                                         </textarea>
                                     </div>
@@ -263,7 +265,7 @@
                                 </div>
                                 <div class="row">
                                     <div class="col py-3" style="hyphens: auto; text-align: justify; line-height: 1;">
-                                        <textarea name="" id="" cols="30" rows="6" class="form-control border border-dark rounded-0">
+                                        <textarea name="" id="" cols="30" rows="6" class="form-control border border-dark rounded-0 editarajax" data-id="{{ $elem_general[12]->id }}" data-model="Elemento" data-field="texto">
                                             {{ $elem_general[12]->texto }}
                                         </textarea>
                                     </div>
