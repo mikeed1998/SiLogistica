@@ -6,6 +6,7 @@
 /public/img/photos/servicios/
 /public/img/photos/sliders/
 /public/img/photos/empresas/
+/public/img/photos/imagenes_estaticas/
 .env
 .env.backup
 .phpunit.result.cache

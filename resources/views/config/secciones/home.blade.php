@@ -280,12 +280,26 @@
                         <div class="col-md-6 col-12">
                             <div class="row d-flex align-items-end justify-content-end">
                                 <div class="col-lg-9 col-md-10 col-9 position-relative rounded" style="
-                                    background-image: url('{{ asset('img/photos/home/nosotros.png') }}');
+                                    background-image: url('{{ asset('img/photos/imagenes_estaticas/'.$elem_general[3]->imagen) }}');
                                     background-position: center;
                                     background-repeat: no-repeat;
                                     background-size: cover;
                                     height: 36rem;
                                     ">
+                                    <div class="position-absolute top-50 start-50 translate-middle w-100">
+                                        <form id="form_img_perfil2" action="{{ route('ajax.cambiar_imagen') }}" method="POST" class="file-upload" enctype="multipart/form-data">
+                                            @csrf
+                                            <input type="hidden" name="id_imagen" value="{{ $elem_general[3]->id }}">
+                                            <input type="hidden" name="tipo_imagen" value="contacto_home">
+                                            <input id="img_perfil2" class="m-0 p-0" type="file" name="archivo">
+                                            <label class="col-12 m-0 px-2 d-flex justify-content-center align-items-center" for="img_perfil2" style=" height: 100%; opacity: 100%; border-radius: 20px;">Actualizar Imagen</label>
+                                        </form>
+                                        <script>
+                                            $('#img_perfil2').change(function(e) {
+                                                $('#form_img_perfil2').trigger('submit');
+                                            });
+                                        </script>
+                                    </div>
                                     <div class="col-lg-6 col-md-9 col-9 mt-5 ms-5 text-center text-white position-absolute top-50 start-0 translate-middle py-3 border border-white border-5 fs-5" style="background-color: #3567AC; line-height: 1; border-radius: 1rem;">
                                         <b class="fs-bolder">Logistica</b> Nacional
                                     </div>
