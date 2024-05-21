@@ -42,7 +42,7 @@
 
         @media(min-width: 576px) and (max-width: 992px) {
             .contenedor-imagen {
-                height: 500px;
+                height: 540px;
             }
 
             .imagen-interna {
@@ -95,8 +95,8 @@
                                 <div class="row">
                                     <div class="col-11 mx-auto py-0">
                                         <div class="row">
-                                            <div class="col-lg-6 col-md-9 col-12 mx-auto border position-relative contenedor-imagen">
-                                                <div class="col-12 border border-danger position-absolute top-0 start-0 imagen-interna" style="
+                                            <div class="col-lg-6 col-md-9 col-12 mx-auto position-relative contenedor-imagen">
+                                                <div class="col-12 position-absolute top-0 start-0 imagen-interna" style="
                                                     background-image: url('{{ asset('img/photos/contacto/contacto.png') }}');">
                                                 </div>
                                             </div>
@@ -143,8 +143,37 @@
                         </div>
                     </div>
                 </div>
-                
-                
+                <div class="row bg-white">
+                    <div class="col-lg-9 col-11 mx-auto">
+                        <div class="row">
+                            <div class="col-lg-9 col-12 ms-auto">
+                                <div class="row d-flex align-items-center justify-content-center">
+                                    <div class="col-lg-4 col-md-9 col-12 mx-auto">
+                                        <div class="row">
+                                            <div class="col-lg-11 col-12 mx-auto py-lg-0 py-2">
+                                                <i class="bi bi-envelope-fill"></i> contacto@silogistica.com
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="col-lg-4 col-md-9 col-12 mx-auto">
+                                        <div class="row">
+                                            <div class="col-lg-11 col-12 mx-auto py-lg-0 py-2">
+                                                <i class="bi bi-telephone-fill"></i> TEL. 3329768968
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="col-lg-4 col-md-9 col-12 mx-auto">
+                                        <div class="row">
+                                            <div class="col-lg-11 col-12 ms-auto text-lg-end text-center py-md-0 py-2">
+                                                Av. Lazáro Cárdenas #33097 Chapalita C.P. 44500 Guadalajara, Jal.
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
             </div>
         </div>
         <div class="row">
