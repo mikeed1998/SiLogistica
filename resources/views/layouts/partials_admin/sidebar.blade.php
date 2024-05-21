@@ -40,6 +40,12 @@
                 <a href="{{ route('seccion.show', ['slug' => 'servicios'])}}" class="link-sider-admin" style="border-radius: 16px; text-decoration: none; " ><i class="bi bi-send-fill"></i> Servicios</a>
             </div>
             <div class="col-9 py-2 mx-auto">
+                <a href="{{ route('seccion.show', ['slug' => 'sliders'])}}" class="link-sider-admin" style="border-radius: 16px; text-decoration: none; " ><i class="bi bi-send-fill"></i> Sliders</a>
+            </div>
+            <div class="col-9 py-2 mx-auto">
+                <a href="{{ route('seccion.show', ['slug' => 'empresas'])}}" class="link-sider-admin" style="border-radius: 16px; text-decoration: none; " ><i class="bi bi-send-fill"></i> Empresas</a>
+            </div>
+            <div class="col-9 py-2 mx-auto">
                 <a href="{{ route('seccion.show', ['slug' => 'contacto'])}}" class="link-sider-admin" style="border-radius: 16px; text-decoration: none; " ><i class="bi bi-send-fill"></i> Contacto</a>
             </div>
         </div>

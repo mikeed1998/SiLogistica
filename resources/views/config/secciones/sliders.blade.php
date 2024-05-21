@@ -63,7 +63,7 @@
     <div class="container-fluid bg-white py-5 rounded mb-5">
         <div class="row">
             <div class="col-12 d-flex justify-content-center align-items-center flex-column text-center">
-                <h3 class="fs-1 fw-bolder" style="color:black; font-family: Arial, sans-serif;">Agregar slider</h3>
+                <h3 class="fs-1 fw-bolder" style="color:black; font-family: Arial, sans-serif;">Añadir imagen al slider</h3>
                 <form id="form_image_slider" action="{{ route('slider.slider.store') }}" method="POST"  class="file-upload mt-2" style="" enctype="multipart/form-data">
                     @csrf
                     <input id="input_slider_img" class="m-0 p-0" type="file" name="imagen">

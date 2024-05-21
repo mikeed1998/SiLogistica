@@ -33,6 +33,15 @@
         display: block;
     }
 
+    .link-header {
+        text-decoration: none;
+        color: #FFFFFF;
+    }
+
+    .link-header:hover {
+        color: #639BE8;
+    }
+
 
 </style>
 
@@ -106,13 +115,13 @@
                         <div class="inicio-grande col-md-2 col-8 mt-4" style="background-color: #003867;"></div>
                         <div class="inicio-grande col-md-10 col-4 text-center py-3 display-4 text-white linea-superior" style="background-color: #003867;">
                             <div class="col-9 text-center">
-                                &nbsp;&nbsp;&nbsp;&nbsp;<a href="{{ route('front.home') }}" class="text-decoration-none">INICIO</a>
+                                &nbsp;&nbsp;&nbsp;&nbsp;<a href="{{ route('front.home') }}" class="link-header">INICIO</a>
                             </div>
                         </div>
                     </div>
                     <div class="row">
                         <div class="inicio-chico col-12 text-center py-3 display-4 text-white" style="margin-top: 1.20rem; background-color: #003867; border-top: 3px solid #639BE8;">
-                            <a href="{{ route('front.home') }}" class="nav-link">INICIO</a>
+                            <a href="{{ route('front.home') }}" class="link-header">INICIO</a>
                         </div>
                     </div>
                     <div class="row">
@@ -130,13 +139,13 @@
                         <div class="col-12">
                             <div class="row text-center text-white" style="background-color: #003867;">
                                 <div class="col-12 display-4 accordion-content">
-                                    <a href="{{ route('front.servicio', ['servicio' => 1]) }}">UNO</a>
+                                    <a href="{{ route('front.servicio', ['servicio' => 1]) }}" class="link-header">UNO</a>
                                 </div>
                                 <div class="col-12 display-4 accordion-content">
-                                    <a href="{{ route('front.servicio', ['servicio' => 2]) }}">DOS</a>
+                                    <a href="{{ route('front.servicio', ['servicio' => 2]) }}" class="link-header">DOS</a>
                                 </div>
                                 <div class="col-12 display-4 accordion-content">
-                                    <a href="{{ route('front.servicio', ['servicio' => 3]) }}">TRES</a>
+                                    <a href="{{ route('front.servicio', ['servicio' => 3]) }}" class="link-header">TRES</a>
                                 </div>
                             </div>
                         </div>
@@ -144,12 +153,12 @@
                     
                     <div class="row">
                         <div class="col-12 text-center py-3 display-4 text-white" style="background-color: #003867; border-top: 3px solid #639BE8;">
-                            <a href="{{ route('front.nosotros') }}">NOSOTROS</a>
+                            <a href="{{ route('front.nosotros') }}" class="link-header">NOSOTROS</a>
                         </div>
                     </div>
                     <div class="row">
                         <div class="col-12 text-center py-3 display-4 text-white" style="background-color: #003867; border-top: 3px solid #639BE8;">
-                            <a href="{{ route('front.contacto') }}">CONTACTO</a>
+                            <a href="{{ route('front.contacto') }}" class="link-header">CONTACTO</a>
                         </div>
                     </div>
                     <div class="row">
