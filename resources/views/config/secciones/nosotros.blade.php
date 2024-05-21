@@ -116,6 +116,43 @@
             display: none;
         }
     </style>
+    <style>
+        .file-upload input[type="file"] {
+                    position: absolute;
+                    left: -9999px;
+                    }
+
+                    .file-upload label {
+                    display: inline-block;
+                    background-color: #00000031;
+                    color: #fff;
+                    padding: 6px 12px;
+                    cursor: pointer;
+                    border-radius: 4px;
+                    font-weight: normal;
+                    /* opacity: 80%; */
+                    }
+
+                    .file-upload input[type="file"] + label:before {
+                    content: "\f07b";
+                    font-family: "Font Awesome 5 Free";
+                    font-size: 16px;
+                    margin-right: 5px;
+                    transition: all 0.5s;
+                    }
+
+                    .file-upload input[type="file"] + label {
+                        transition: all 0.5s;
+                    }
+
+                    .file-upload input[type="file"]:focus + label,
+                    .file-upload input[type="file"] + label:hover {
+                    backdrop-filter: blur(5px);
+                    background-color: #41464a37;
+                    opacity: 100%;
+                    transition: all 0.5s;
+                    }
+    </style>
 @endsection
 
 @section('content')
@@ -152,9 +189,24 @@
                                 </div>
                             </div>
                         </div>
-                        <div class="col-md-6 col-12 cont-imagen" style="
-                            background-image: url('{{ asset('img/photos/nosotros/nosotros.png') }}');
-                        "></div>
+                        <div class="col-md-6 col-12 cont-imagen position-relative" style="
+                            background-image: url('{{ asset('img/photos/imagenes_estaticas/'.$elem_general[8]->imagen) }}');
+                        ">
+                            <div class="position-absolute top-50 start-50 translate-middle w-100">
+                                <form id="form_img_perfil2" action="{{ route('ajax.cambiar_imagen') }}" method="POST" class="file-upload" enctype="multipart/form-data">
+                                    @csrf
+                                    <input type="hidden" name="id_imagen" value="{{ $elem_general[8]->id }}">
+                                    <input type="hidden" name="tipo_imagen" value="contacto_home">
+                                    <input id="img_perfil2" class="m-0 p-0" type="file" name="archivo">
+                                    <label class="col-12 m-0 px-2 d-flex justify-content-center align-items-center" for="img_perfil2" style=" height: 100%; opacity: 100%; border-radius: 20px;">Actualizar Imagen</label>
+                                </form>
+                                <script>
+                                    $('#img_perfil2').change(function(e) {
+                                        $('#form_img_perfil2').trigger('submit');
+                                    });
+                                </script>
+                            </div>
+                        </div>
                     </div>
                 </div>
             </div>
@@ -221,7 +273,21 @@
                     </div>
                     <div class="col-6 mx-auto py-2 position-relative" style="z-index: 0;">
                         <div class="col-12 position-absolute bottom-0 start-0" style="z-index: -2;">
-                            <img src="{{ asset('img/photos/nosotros/nosotros_stockchida.png') }}" alt="" class="img-fluid" style="border-bottom-left-radius: 250px; border-bottom-right-radius: 250px;">
+                            <img src="{{ asset('img/photos/imagenes_estaticas/'.$elem_general[13]->imagen) }}" alt="" class="img-fluid" style="border-bottom-left-radius: 250px; border-bottom-right-radius: 250px;">
+                        </div>
+                        <div class="position-absolute top-50 start-50 translate-middle w-100">
+                            <form id="form_img_perfil" action="{{ route('ajax.cambiar_imagen') }}" method="POST" class="file-upload" enctype="multipart/form-data">
+                                @csrf
+                                <input type="hidden" name="id_imagen" value="{{ $elem_general[13]->id }}">
+                                <input type="hidden" name="tipo_imagen" value="contacto_home">
+                                <input id="img_perfil" class="m-0 p-0" type="file" name="archivo">
+                                <label class="col-12 m-0 px-2 d-flex justify-content-center align-items-center" for="img_perfil" style=" height: 100%; opacity: 100%; border-radius: 20px;">Actualizar Imagen</label>
+                            </form>
+                            <script>
+                                $('#img_perfil').change(function(e) {
+                                    $('#form_img_perfil').trigger('submit');
+                                });
+                            </script>
                         </div>
                     </div>
                 </div>
