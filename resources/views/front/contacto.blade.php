@@ -148,14 +148,14 @@
                         <div class="row">
                             <div class="col-lg-9 col-12 ms-auto">
                                 <div class="row d-flex align-items-center justify-content-center">
-                                    <div class="col-lg-4 col-md-9 col-12 mx-auto">
+                                    <div class="col-lg-4 col-md-10 col-12 mx-auto">
                                         <div class="row">
                                             <div class="col-lg-11 col-12 mx-auto py-lg-0 py-2">
                                                 <i class="bi bi-envelope-fill"></i> contacto@silogistica.com
                                             </div>
                                         </div>
                                     </div>
-                                    <div class="col-lg-4 col-md-9 col-12 mx-auto">
+                                    <div class="col-lg-4 col-md-10 col-12 mx-auto">
                                         <div class="row">
                                             <div class="col-lg-11 col-12 mx-auto py-lg-0 py-2">
                                                 <i class="bi bi-telephone-fill"></i> TEL. 3329768968
