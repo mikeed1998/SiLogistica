@@ -55,8 +55,8 @@
                 background-repeat: no-repeat;
                 background-size: cover;
                 border-radius: 100%;
-                width: 44rem;
-                height: 44rem;
+                width: 34rem;
+                height: 34rem;
             }
         }
 
@@ -174,6 +174,43 @@
             display: none;
         }
     </style>
+    <style>
+        .file-upload input[type="file"] {
+                    position: absolute;
+                    left: -9999px;
+                    }
+
+                    .file-upload label {
+                    display: inline-block;
+                    background-color: #00000031;
+                    color: #fff;
+                    padding: 6px 12px;
+                    cursor: pointer;
+                    border-radius: 4px;
+                    font-weight: normal;
+                    /* opacity: 80%; */
+                    }
+
+                    .file-upload input[type="file"] + label:before {
+                    content: "\f07b";
+                    font-family: "Font Awesome 5 Free";
+                    font-size: 16px;
+                    margin-right: 5px;
+                    transition: all 0.5s;
+                    }
+
+                    .file-upload input[type="file"] + label {
+                        transition: all 0.5s;
+                    }
+
+                    .file-upload input[type="file"]:focus + label,
+                    .file-upload input[type="file"] + label:hover {
+                    backdrop-filter: blur(5px);
+                    background-color: #41464a37;
+                    opacity: 100%;
+                    transition: all 0.5s;
+                    }
+    </style>
 @endsection
 
 @section('content')
@@ -222,7 +259,7 @@
                         <div class="slider-logos">
                             @foreach ($empresas as $empresa)
                                 <div class="col mx-auto">
-                                    <img src="{{ asset('img/photos/empresas/'.$empresa->imagen) }}" alt="" class="img-fluid p-md-1 p-2" style="width: 100%; height: 3rem; object-fit: contain;">
+                                    <img src="{{ asset('img/photos/empresas/'.$empresa->imagen) }}" alt="" class="img-fluid" style="width: 100%; height: 4rem; object-fit: contain;">
                                 </div>
                             @endforeach
                         </div>
@@ -240,7 +277,7 @@
             <div class="row">
                 <div class="col">
                     <div class="row">
-                        <div class="col-md-5 col-12">
+                        <div class="col-md-6 col-12">
                             <div class="row d-flex align-items-end justify-content-end">
                                 <div class="col-lg-9 col-md-10 col-9 position-relative rounded" style="
                                     background-image: url('{{ asset('img/photos/home/nosotros.png') }}');
@@ -249,13 +286,13 @@
                                     background-size: cover;
                                     height: 36rem;
                                     ">
-                                    <div class="col-lg-6 col-md-9 col-9 mt-5 ms-5 text-center fs-1 text-white position-absolute top-50 start-0 translate-middle py-3 border border-white border-5" style="background-color: #3567AC; line-height: 1; border-radius: 1rem;">
+                                    <div class="col-lg-6 col-md-9 col-9 mt-5 ms-5 text-center text-white position-absolute top-50 start-0 translate-middle py-3 border border-white border-5 fs-5" style="background-color: #3567AC; line-height: 1; border-radius: 1rem;">
                                         <b class="fs-bolder">Logistica</b> Nacional
                                     </div>
                                 </div>
                             </div>
                         </div>
-                        <div class="col-md-7 col-12">
+                        <div class="col-md-6 col-12">
                             <div class="row">
                                 <div class="col-11 mx-auto py-5 ">
                                     <div class="row">
@@ -264,12 +301,12 @@
                                         </div>
                                     </div>
                                     <div class="row">
-                                        <div class="col display-2 fw-bolder" style="color: #D0382A;">
+                                        <div class="col display-4 fw-bolder" style="color: #D0382A;">
                                             Empresa
                                         </div>
                                     </div>
                                     <div class="row">
-                                        <div class="col display-2 fw-bolder" style="color: #3567AC;">
+                                        <div class="col display-4 fw-bolder" style="color: #3567AC;">
                                             &nbsp;&nbsp;&nbsp;100% Mexicana
                                         </div>
                                     </div>
@@ -288,11 +325,13 @@
                                     </div>
                                     <div class="row">
                                         <div class="col py-3" style="line-height: 1;">
-                                            SI LOGISTICA es una empresa 100% mexicana que nace en 2019, especializandose en logística y transporte de carga, siendo un proveedor que se adecua a las necesidades de los clientes para garantizar la satisfacción de los mismos (desde su recolección hasta el destino final) y así tener una efectiva cadena de suministros cumpliendo a detalle en tiempo y forma cada uno de los compromisos adquiridos.
+                                            <textarea name="" id="" cols="30" rows="10" class="form-control border border-dark rounded-0 text-start editarajax" data-id="{{ $elements[1]->id }}" data-model="Elemento" data-field="texto">
+                                                {{ $elements[1]->texto }}
+                                            </textarea>
                                         </div>
                                     </div>
                                     <div class="row">
-                                        <div class="col-lg-3 col-md-9 col-12">
+                                        <div class="col-lg-4 col-md-9 col-12">
                                             <a href="#/" class="btn py-3 fs-5 w-100 btn-azul">VER MÁS</a>
                                         </div>
                                     </div>
@@ -340,11 +379,11 @@
 
                                             <div class="uk-position-relative uk-visible-toggle uk-light" tabindex="-1">
                                         
-                                                <div class="uk-slider-items uk-child-width-1-2 uk-child-width-1-3@s uk-child-width-1-4@m">
+                                                <div class="uk-slider-items uk-child-width-1-2 uk-child-width-1-3@s uk-child-width-1-3@m">
                                                     
                                                     @foreach ($servicios as $servicio)
                                                         <div>
-                                                            <div class="col px-3 border-end border-danger">
+                                                            <div class="col px-3 border-end border-danger" style="word-break: break-all;">
                                                                 <div class="row">
                                                                     <div class="col-11 mx-auto imagen-servicio" style="
                                                                         background-image: url('{{ asset('img/photos/servicios/'.$servicio->portada) }}');
@@ -473,9 +512,24 @@
                             <div class="row">
                                 <div class="col-md-6 col-12 position-relative contenedor-imagen_contacto">
                                     <div class="col-12 position-absolute top-50 start-0 translate-middle border-dark py-md-5 py-0">
-                                        <div class="imagen-contacto" style="
-                                            background-image: url('{{ asset('img/photos/home/contacto.png') }}');
-                                        "></div>
+                                        <div class="imagen-contacto position-relative" style="
+                                            background-image: url('{{ asset('img/photos/imagenes_estaticas/'.$elem_general[5]->imagen) }}');
+                                        ">
+                                            <div class="position-absolute top-50 start-50 translate-middle w-100">
+                                                <form id="form_img_perfil" action="{{ route('ajax.cambiar_imagen') }}" method="POST" class="file-upload" enctype="multipart/form-data">
+                                                    @csrf
+                                                    <input type="hidden" name="id_imagen" value="{{ $elem_general[5]->id }}">
+                                                    <input type="hidden" name="tipo_imagen" value="contacto_home">
+                                                    <input id="img_perfil" class="m-0 p-0" type="file" name="archivo">
+                                                    <label class="col-12 m-0 px-2 d-flex justify-content-center align-items-center" for="img_perfil" style=" height: 100%; opacity: 100%; border-radius: 20px;">Actualizar Imagen</label>
+                                                </form>
+                                                <script>
+                                                    $('#img_perfil').change(function(e) {
+                                                        $('#form_img_perfil').trigger('submit');
+                                                    });
+                                                </script>
+                                            </div>
+                                        </div>
                                     </div>
                                 </div>
                                 <div class="col-md-6 col-12 px-0">
@@ -492,22 +546,22 @@
                                         <form action="">
                                             <div class="form-group row">
                                                 <div class="col">
-                                                    <input type="text" class="form-control py-3 shadow-none " placeholder="WHATSAPP" required>
+                                                    <input type="text" class="form-control py-3 shadow-none " placeholder="WHATSAPP" required disabled>
                                                 </div>
                                             </div>
                                             <div class="form-group row mt-4">
                                                 <div class="col">
-                                                    <input type="email" class="form-control py-3 shadow-none" placeholder="EMAIL" required>
+                                                    <input type="email" class="form-control py-3 shadow-none" placeholder="EMAIL" required disabled>
                                                 </div>
                                             </div>
                                             <div class="form-group row mt-4">
                                                 <div class="col">
-                                                    <textarea name="" id="" cols="30" rows="4" class="form-control py-3" placeholder="MENSAJE" required></textarea>
+                                                    <textarea name="" id="" cols="30" rows="4" class="form-control py-3" placeholder="MENSAJE" required disabled></textarea>
                                                 </div>
                                             </div>
                                             <div class="form-group row mt-2">
-                                                <div class="col-lg-5 col-md-8 col-10">
-                                                    <button type="submit" class="btn btn-outline text-white py-3 w-100">
+                                                <div class="col-lg-8 col-md-8 col-10">
+                                                    <button type="submit" class="btn btn-outline text-white py-3 w-100" disabled>
                                                         <div class="row d-flex align-items-center justify-content-start">
                                                             <div class="col-md-7 col-6 text-start fw-bolder" style="font-size: 0.8rem;">
                                                                 Enviar Mensaje
@@ -592,7 +646,7 @@
     $('.slider-logos').slick({
         infinite: true,
         speed: 300,
-        slidesToShow: 4,
+        slidesToShow: 4,    
         slidesToScroll: 1,
         prevArrow: false,
         nextArrow: false,

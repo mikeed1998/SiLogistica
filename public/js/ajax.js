@@ -32,7 +32,7 @@ $(document).ready(function() {
 		var tcsrf = $('meta[name="csrf-token"]').attr('content');
 		var url = $(this).attr("data-url");
 
-		console.log(id);
+		console.log(id); 
 		console.log(tabla);
 		console.log(campo);
 		console.log(valor);

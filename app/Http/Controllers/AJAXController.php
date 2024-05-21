@@ -7,6 +7,7 @@ use Illuminate\Database\Eloquent\ModelNotFoundException;
 use Illuminate\Support\Facades\Storage;
 use Illuminate\Support\Str;
 use App\Servicio;
+use App\Elemento;
 
 class AJAXController extends Controller
 {
@@ -58,6 +59,27 @@ class AJAXController extends Controller
                 return response()->json(['success'=>true, 'mensaje'=>'Se removio de destacados']);
             else
                 return response()->json(['success'=>false, 'mensaje'=>'Error al remover']);
+        }
+    }
+
+    public function cambiar_imagen(Request $request) {
+        if($request->tipo_imagen == 'contacto_home') {
+            $elemento = Elemento::find($request->id_imagen);
+            $file = $request->file('archivo');
+            $oldFile = 'img/photos/imagenes_estaticas/'.$elemento->imagen;
+            $extension = $file->getClientOriginalExtension();
+            $namefile = Str::random(30) . '.' . $extension;
+
+            \Storage::disk('local')->put("img/photos/imagenes_estaticas/" . $namefile, \File::get($file));
+            unlink($oldFile);
+
+            $elemento->imagen = $namefile;
+            $elemento->update();
+
+            \Toastr::success('Guardado');
+            return redirect()->back();
+        } else {
+            dd('no llego');
         }
     }
 

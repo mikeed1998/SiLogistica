@@ -149,10 +149,10 @@
                         <img class="principal-slider img-fluid" src="{{ asset('img/photos/home/slider_ejemplo.PNG') }}" alt="">
                     </div>
                     <div>
-                        <img class="principal-slider img-fluid" src="{{ asset('img/photos/home/002-095-000.png') }}" alt="">
+                        <img class="principal-slider img-fluid" src="{{ asset('img/photos/home/nosotros.png') }}" alt="">
                     </div>
                     <div>
-                        <img class="principal-slider img-fluid" src="{{ asset('img/photos/home/002-023.png') }}" alt="">
+                        <img class="principal-slider img-fluid" src="{{ asset('img/photos/home/servicios.png') }}" alt="">
                     </div>
                 </div>
             </div>

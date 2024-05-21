@@ -73,6 +73,8 @@
 
     Route::patch('/editarajax', 'AJAXController@editarajax');
     Route::post('/switch_inicio', 'AJAXController@switch_inicio')->name('ajax.switch_inicio');
+    Route::post('/cambiar_imagen', 'AJAXController@cambiar_imagen')->name('ajax.cambiar_imagen');
+
 
 
 
