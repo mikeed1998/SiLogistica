@@ -71,7 +71,7 @@ class AJAXController extends Controller
             $namefile = Str::random(30) . '.' . $extension;
 
             \Storage::disk('local')->put("img/photos/imagenes_estaticas/" . $namefile, \File::get($file));
-            unlink($oldFile);
+            unlink($oldFile);  
 
             $elemento->imagen = $namefile;
             $elemento->update();
