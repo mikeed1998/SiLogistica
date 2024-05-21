@@ -37,16 +37,16 @@
                 <a href="{{ route('seccion.show', ['slug' => 'nosotros'])}}" class="link-sider-admin" style="border-radius: 16px; text-decoration: none; " ><i class="bi bi-postcard-fill"></i> Nosotros</a>
             </div>
             <div class="col-9 py-2 mx-auto">
-                <a href="{{ route('seccion.show', ['slug' => 'servicios'])}}" class="link-sider-admin" style="border-radius: 16px; text-decoration: none; " ><i class="bi bi-send-fill"></i> Servicios</a>
+                <a href="{{ route('seccion.show', ['slug' => 'servicios'])}}" class="link-sider-admin" style="border-radius: 16px; text-decoration: none; " ><i class="bi bi-window"></i> Servicios</a>
             </div>
             <div class="col-9 py-2 mx-auto">
-                <a href="{{ route('seccion.show', ['slug' => 'sliders'])}}" class="link-sider-admin" style="border-radius: 16px; text-decoration: none; " ><i class="bi bi-send-fill"></i> Sliders</a>
+                <a href="{{ route('seccion.show', ['slug' => 'sliders'])}}" class="link-sider-admin" style="border-radius: 16px; text-decoration: none; " ><i class="bi bi-card-image"></i> Sliders</a>
             </div>
             <div class="col-9 py-2 mx-auto">
                 <a href="{{ route('seccion.show', ['slug' => 'empresas'])}}" class="link-sider-admin" style="border-radius: 16px; text-decoration: none; " ><i class="bi bi-send-fill"></i> Empresas</a>
             </div>
             <div class="col-9 py-2 mx-auto">
-                <a href="{{ route('seccion.show', ['slug' => 'contacto'])}}" class="link-sider-admin" style="border-radius: 16px; text-decoration: none; " ><i class="bi bi-send-fill"></i> Contacto</a>
+                <a href="{{ route('seccion.show', ['slug' => 'contacto'])}}" class="link-sider-admin" style="border-radius: 16px; text-decoration: none; " ><i class="bi bi-building-fill"></i> Contacto</a>
             </div>
         </div>
     </div>
