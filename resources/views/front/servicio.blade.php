@@ -131,7 +131,7 @@
 @endsection
 
 @section('content')
-    <div class="container-fluid">
+    <div class="container-fluid mt-5">
         <div class="row">
             <div class="col">
                 <div class="row">
@@ -142,8 +142,8 @@
                         <div class="row">
                             <div class="col-10 mx-auto pt-3">
                                 <div class="row">
-                                    <div class="col-lg-11 col-md-12 col-12 contenedor-nombre_servicio d-flex align-items-center justify-content-center px-3 py-3 display-4 text-start text-white fw-bolder">
-                                        Nombre<br> &nbsp;&nbsp;&nbsp;del Servicio
+                                    <div class="col-lg-11 col-md-12 col-12 contenedor-nombre_servicio d-flex align-items-center justify-content-center px-3 py-3 display-5 text-start text-white fw-bolder">
+                                        {{ $servicio->titulo }}
                                     </div>
                                 </div>
                             </div>
@@ -157,15 +157,15 @@
                 <div class="row">
                     <div class="col-lg-7 col-md-10 col-10 mx-auto py-5 position-relative">
                         <div class="col-lg-11 col-md-12 col-12 position-absolute bottom-0 end-0 imagen-servicio_pri" style="
-                            background-image: url('{{ asset('img/photos/servicio/servicio.png') }}');
+                            background-image: url('{{ asset('img/photos/servicios/'.$servicio->portada) }}');
                         "></div>
                     </div>
                     <div class="col-lg-5 col-md-12 col-12 py-5">
                         <div class="row">
                             <div class="col-10 mx-auto py-3 position-relative">
                                 <div class="row">
-                                    <div class="col-11" style="color: #3567AC; line-height: 1; font-size: 1.25rem; hyphens:auto;">
-                                        SI LOGISTICA es una empresa 100% mexicana que nace en 2019, especializandose en logística y transporte de carga, siendo un proveedor que se adecua a las necesidades de los clientes para garantizar la satisfacción de los mismos (desde su recolección hasta su destino final) y asi tener una efectiva cadena de suministros cumpliendo a detalle en tiempo y forma cada uno de los compromisos adquiridos.
+                                    <div class="col-11" style="color: #3567AC; font-size: 1.25rem; hyphens:auto;">
+                                        {!! $servicio->descripcion !!}
                                     </div>
                                 </div>
                             </div>
@@ -221,186 +221,44 @@
                                             <div class="uk-position-relative uk-visible-toggle uk-light" tabindex="-1">
                                         
                                                 <div class="uk-slider-items uk-child-width-1-2 uk-child-width-1-3@s uk-child-width-1-4@m">
-                                                    <div>
-                                                        <div class="col px-3 border-end border-danger">
-                                                            <div class="row">
-                                                                <div class="col-11 mx-auto imagen-servicio" style="
-                                                                    background-image: url('{{ asset('img/photos/home/servicios-img.png') }}');
-                                                                    background-position: center;
-                                                                    background-repeat: no-repeat;
-                                                                    background-size: cover;
-                                                                "></div>
-                                                            </div>
-                                                            <div class="row">
-                                                                <div class="col mt-4 fs-1 fw-bolder" style="color: #3567AC; line-height: 1;">
-                                                                    Entrega puerta a puerta
+                                                    @foreach ($servicios as $s)
+                                                        <div>
+                                                            <div class="col px-3 border-end border-danger"> <!-- style="word-break: break-all;" //-->
+                                                                <div class="row">
+                                                                    <div class="col-11 mx-auto imagen-servicio" style="
+                                                                        background-image: url('{{ asset('img/photos/servicios/'.$s->portada) }}');
+                                                                        background-position: center;
+                                                                        background-repeat: no-repeat;
+                                                                        background-size: cover;
+                                                                    "></div>
                                                                 </div>
-                                                            </div>
-                                                            <div class="row">
-                                                                <div class="col mt-3 text-dark" style="text-align: justify; line-height: 1; font-size: 0.9rem;">
-                                                                    Lorem, ipsum dolor sit amet consectetur adipisicing elit. Ducimus eaque odio atque! Quae odio culpa explicabo. Iusto saepe ipsum molestias.
+                                                                <div class="row">
+                                                                    <div class="col mt-4 fs-1 fw-bolder" style="color: #3567AC; line-height: 1;">
+                                                                        {{ $s->titulo }}
+                                                                    </div>
                                                                 </div>
-                                                            </div>
-                                                            <div class="row">
-                                                                <div class="col fw-bolder mt-2">
-                                                                    <a href="#/" class="text-decoration-none" style="color: #D0382A;">
-                                                                        <div class="row">
-                                                                            <div class="col-lg-6 col-md-12 col-12">
-                                                                                Ver más detalles 
+                                                                <div class="row">
+                                                                    <div class="col mt-3 text-dark" style="text-align: justify; max-height: 9rem; overflow: hidden;">
+                                                                        {!! $s->descripcion !!}
+                                                                    </div>
+                                                                </div>
+                                                                <div class="row">
+                                                                    <div class="col fw-bolder mt-2">
+                                                                        <a href="{{ route('front.servicio', ['id' => $s->id]) }}" class="text-decoration-none" style="color: #D0382A;">
+                                                                            <div class="row">
+                                                                                <div class="col-lg-6 col-md-12 col-12">
+                                                                                    Ver más detalles 
+                                                                                </div>
+                                                                                <div class="col-lg-6 col-md-12 col-12 text-start">
+                                                                                    <img src="{{ asset('img/photos/home/flechita.png') }}" alt="" class="img-fluid">
+                                                                                </div>
                                                                             </div>
-                                                                            <div class="col-lg-6 col-md-12 col-12 text-start">
-                                                                                <img src="{{ asset('img/photos/home/flechita.png') }}" alt="" class="img-fluid">
-                                                                            </div>
-                                                                        </div>
-                                                                    </a>
+                                                                        </a>
+                                                                    </div>
                                                                 </div>
                                                             </div>
                                                         </div>
-                                                    </div>
-                                                    <div>
-                                                        <div class="col px-3 border-end border-danger">
-                                                            <div class="row">
-                                                                <div class="col-11 mx-auto imagen-servicio" style="
-                                                                    background-image: url('{{ asset('img/photos/home/servicios-img.png') }}');
-                                                                    background-position: center;
-                                                                    background-repeat: no-repeat;
-                                                                    background-size: cover;
-                                                                "></div>
-                                                            </div>
-                                                            <div class="row">
-                                                                <div class="col mt-4 fs-1 fw-bolder" style="color: #3567AC; line-height: 1;">
-                                                                    Entrega puerta a puerta
-                                                                </div>
-                                                            </div>
-                                                            <div class="row">
-                                                                <div class="col mt-3 text-dark" style="text-align: justify; line-height: 1; font-size: 0.9rem;">
-                                                                    Lorem, ipsum dolor sit amet consectetur adipisicing elit. Ducimus eaque odio atque! Quae odio culpa explicabo. Iusto saepe ipsum molestias.
-                                                                </div>
-                                                            </div>
-                                                            <div class="row">
-                                                                <div class="col fw-bolder mt-2">
-                                                                    <a href="#/" class="text-decoration-none" style="color: #D0382A;">
-                                                                        <div class="row">
-                                                                            <div class="col-lg-6 col-md-12 col-12">
-                                                                                Ver más detalles 
-                                                                            </div>
-                                                                            <div class="col-lg-6 col-md-12 col-12 text-start">
-                                                                                <img src="{{ asset('img/photos/home/flechita.png') }}" alt="" class="img-fluid">
-                                                                            </div>
-                                                                        </div>
-                                                                    </a>
-                                                                </div>
-                                                            </div>
-                                                        </div>
-                                                    </div>
-                                                    <div>
-                                                        <div class="col px-3 border-end border-danger">
-                                                            <div class="row">
-                                                                <div class="col-11 mx-auto imagen-servicio" style="
-                                                                    background-image: url('{{ asset('img/photos/home/servicios-img.png') }}');
-                                                                    background-position: center;
-                                                                    background-repeat: no-repeat;
-                                                                    background-size: cover;
-                                                                "></div>
-                                                            </div>
-                                                            <div class="row">
-                                                                <div class="col mt-4 fs-1 fw-bolder" style="color: #3567AC; line-height: 1;">
-                                                                    Entrega puerta a puerta
-                                                                </div>
-                                                            </div>
-                                                            <div class="row">
-                                                                <div class="col mt-3 text-dark" style="text-align: justify; line-height: 1; font-size: 0.9rem;">
-                                                                    Lorem, ipsum dolor sit amet consectetur adipisicing elit. Ducimus eaque odio atque! Quae odio culpa explicabo. Iusto saepe ipsum molestias.
-                                                                </div>
-                                                            </div>
-                                                            <div class="row">
-                                                                <div class="col fw-bolder mt-2">
-                                                                    <a href="#/" class="text-decoration-none" style="color: #D0382A;">
-                                                                        <div class="row">
-                                                                            <div class="col-lg-6 col-md-12 col-12">
-                                                                                Ver más detalles 
-                                                                            </div>
-                                                                            <div class="col-lg-6 col-md-12 col-12 text-start">
-                                                                                <img src="{{ asset('img/photos/home/flechita.png') }}" alt="" class="img-fluid">
-                                                                            </div>
-                                                                        </div>
-                                                                    </a>
-                                                                </div>
-                                                            </div>
-                                                        </div>
-                                                    </div>
-                                                    <div>
-                                                        <div class="col px-3 border-end border-danger">
-                                                            <div class="row">
-                                                                <div class="col-11 mx-auto imagen-servicio" style="
-                                                                    background-image: url('{{ asset('img/photos/home/servicios-img.png') }}');
-                                                                    background-position: center;
-                                                                    background-repeat: no-repeat;
-                                                                    background-size: cover;
-                                                                "></div>
-                                                            </div>
-                                                            <div class="row">
-                                                                <div class="col mt-4 fs-1 fw-bolder" style="color: #3567AC; line-height: 1;">
-                                                                    Entrega puerta a puerta
-                                                                </div>
-                                                            </div>
-                                                            <div class="row">
-                                                                <div class="col mt-3 text-dark" style="text-align: justify; line-height: 1; font-size: 0.9rem;">
-                                                                    Lorem, ipsum dolor sit amet consectetur adipisicing elit. Ducimus eaque odio atque! Quae odio culpa explicabo. Iusto saepe ipsum molestias.
-                                                                </div>
-                                                            </div>
-                                                            <div class="row">
-                                                                <div class="col fw-bolder mt-2">
-                                                                    <a href="#/" class="text-decoration-none" style="color: #D0382A;">
-                                                                        <div class="row">
-                                                                            <div class="col-lg-6 col-md-12 col-12">
-                                                                                Ver más detalles 
-                                                                            </div>
-                                                                            <div class="col-lg-6 col-md-12 col-12 text-start">
-                                                                                <img src="{{ asset('img/photos/home/flechita.png') }}" alt="" class="img-fluid">
-                                                                            </div>
-                                                                        </div>
-                                                                    </a>
-                                                                </div>
-                                                            </div>
-                                                        </div>
-                                                    </div>
-                                                    <div>
-                                                        <div class="col px-3 border-end border-danger">
-                                                            <div class="row">
-                                                                <div class="col-11 mx-auto imagen-servicio" style="
-                                                                    background-image: url('{{ asset('img/photos/home/servicios-img.png') }}');
-                                                                    background-position: center;
-                                                                    background-repeat: no-repeat;
-                                                                    background-size: cover;
-                                                                "></div>
-                                                            </div>
-                                                            <div class="row">
-                                                                <div class="col mt-4 fs-1 fw-bolder" style="color: #3567AC; line-height: 1;">
-                                                                    Entrega puerta a puerta
-                                                                </div>
-                                                            </div>
-                                                            <div class="row">
-                                                                <div class="col mt-3 text-dark" style="text-align: justify; line-height: 1; font-size: 0.9rem;">
-                                                                    Lorem, ipsum dolor sit amet consectetur adipisicing elit. Ducimus eaque odio atque! Quae odio culpa explicabo. Iusto saepe ipsum molestias.
-                                                                </div>
-                                                            </div>
-                                                            <div class="row">
-                                                                <div class="col fw-bolder mt-2">
-                                                                    <a href="#/" class="text-decoration-none" style="color: #D0382A;">
-                                                                        <div class="row">
-                                                                            <div class="col-lg-6 col-md-12 col-12">
-                                                                                Ver más detalles 
-                                                                            </div>
-                                                                            <div class="col-lg-6 col-md-12 col-12 text-start">
-                                                                                <img src="{{ asset('img/photos/home/flechita.png') }}" alt="" class="img-fluid">
-                                                                            </div>
-                                                                        </div>
-                                                                    </a>
-                                                                </div>
-                                                            </div>
-                                                        </div>
-                                                    </div>
+                                                    @endforeach
                                                 </div>
                                         
                                                 <div class="row py-4 mt-4">
@@ -433,21 +291,11 @@
         <div class="container-fluid" style="background-color: #F6F6F6;">
             <div class="row text-center py-5 d-flex align-items-center justify-content-center">
                 <div class="slider-logos">
-                    <div class="col mx-auto">
-                        <img src="{{ asset('img/photos/home/DHL.png') }}" alt="" class="img-fluid p-md-1 p-2" style="width: 100%; height: 3rem; object-fit: contain;">
-                    </div>
-                    <div class="col mx-auto">
-                        <img src="{{ asset('img/photos/home/FEDEX.png') }}" alt="" class="img-fluid p-md-1 p-2" style="width: 100%; height: 3rem; object-fit: contain;">
-                    </div>
-                    <div class="col mx-auto">
-                        <img src="{{ asset('img/photos/home/REDPACK.png') }}" alt="" class="img-fluid p-md-1 p-2" style="width: 100%; height: 3rem; object-fit: contain;">
-                    </div>
-                    <div class="col mx-auto">
-                        <img src="{{ asset('img/photos/home/REDPACK.png') }}" alt="" class="img-fluid p-md-1 p-2" style="width: 100%; height: 3rem; object-fit: contain;">
-                    </div>
-                    <div class="col mx-auto">
-                        <img src="{{ asset('img/photos/home/REDPACK.png') }}" alt="" class="img-fluid p-md-1 p-2" style="width: 100%; height: 3rem; object-fit: contain;">
-                    </div>
+                    @foreach ($empresas as $e)
+                        <div class="col mx-auto">
+                            <img src="{{ asset('img/photos/empresas/'.$e->imagen) }}" alt="" class="img-fluid p-md-1 p-2" style="width: 100%; height: 3rem; object-fit: contain;">
+                        </div>
+                    @endforeach
                 </div>
             </div>
         </div>

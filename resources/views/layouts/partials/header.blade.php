@@ -1,5 +1,8 @@
 <style>
 
+    .fa-bars { color: #FFFFFF; }
+    .fa-bars:hover { color: #639BE8; }
+
     @media(min-width: 992px) { 
         .linea-superior { border-top: 3px solid #639BE8; }
     }
@@ -63,13 +66,13 @@
                                     <div class="col-lg-11 col-md-12 mx-auto">
                                         <div class="row d-flex align-items-center justify-content-center">
                                             <div class="col-3 text-white">
-                                                <a href="#/" class="text-decoration-none px-1">
+                                                <a href="http://wa.me/{{ $config->whatsapp }}" class="text-decoration-none px-1">
                                                     <i class="bi bi-whatsapp text-white fs-4"></i>
                                                 </a>
-                                                <a href="#/" class="text-decoration-none px-1">
+                                                <a href="{{ $config->facebook }}" class="text-decoration-none px-1">
                                                     <i class="bi bi-facebook text-white fs-4"></i>
                                                 </a>
-                                                <a href="#/" class="text-decoration-none px-1">
+                                                <a href="{{ $config->instagram }}" class="text-decoration-none px-1">
                                                     <i class="bi bi-instagram text-white fs-4"></i>
                                                 </a>
                                             </div>
@@ -91,7 +94,8 @@
                                             </div>
                                             <div class="col-lg-3 col-md-2 text-center text-white">
                                                 <button type="button" onclick="activarModal(1)" class="btn btn-outline border-0 boton-menu">
-                                                    <img src="{{ asset('img/photos/header/menubg.png') }}" alt="" class="img-fluid">
+                                                    {{-- <img src="{{ asset('img/photos/header/menubg.png') }}" alt="" class="img-fluid"> --}}
+                                                    <i class="fa-solid fa-bars display-4 py-2" style="width: 100%;"></i>
                                                 </button>
                                             </div>
                                         </div>
@@ -104,7 +108,8 @@
                         <div class="row">
                             <div class="col d-flex align-items-center justify-content-center"  style="height: 10rem;">
                                 <button type="button" onclick="activarModal(1)" class="btn btn-outline border-0 boton-menu">
-                                    <img src="{{ asset('img/photos/header/menubg.png') }}" alt="" class="img-fluid">
+                                    {{-- <img src="{{ asset('img/photos/header/menubg.png') }}" alt="" class="img-fluid"> --}}
+                                    <i class="fa-solid fa-bars display-4" style="width: 100%;"></i>
                                 </button>
                             </div>
                         </div>
@@ -138,19 +143,14 @@
                         </div>
                         <div class="col-12">
                             <div class="row text-center text-white" style="background-color: #003867;">
-                                <div class="col-12 display-4 accordion-content">
-                                    <a href="{{ route('front.servicio', ['servicio' => 1]) }}" class="link-header">UNO</a>
-                                </div>
-                                <div class="col-12 display-4 accordion-content">
-                                    <a href="{{ route('front.servicio', ['servicio' => 2]) }}" class="link-header">DOS</a>
-                                </div>
-                                <div class="col-12 display-4 accordion-content">
-                                    <a href="{{ route('front.servicio', ['servicio' => 3]) }}" class="link-header">TRES</a>
-                                </div>
+                                @foreach ($servicios as $servicio_header)
+                                    <div class="col-12 display-4 accordion-content">
+                                        <a href="{{ route('front.servicio', ['id' => $servicio_header->id]) }}" class="link-header">{{ $servicio_header->titulo }}</a>
+                                    </div>
+                                @endforeach
                             </div>
                         </div>
                     </div>
-                    
                     <div class="row">
                         <div class="col-12 text-center py-3 display-4 text-white" style="background-color: #003867; border-top: 3px solid #639BE8;">
                             <a href="{{ route('front.nosotros') }}" class="link-header">NOSOTROS</a>

@@ -14,7 +14,7 @@
     Route::get('/nosotros', 'FrontController@nosotros')->name('front.nosotros');
     Route::get('/contacto', 'FrontController@contacto')->name('front.contacto');
     Route::get('/servicios', 'FrontController@servicios')->name('front.servicios');
-    Route::get('/servicio_detalle/{servicio}', 'FrontController@servicio')->name('front.servicio');
+    Route::get('/servicio_detalle/{id}', 'FrontController@servicio')->name('front.servicio');
  
     Route::get('/admin', 'FrontController@admin')->name('front.admin')->middleware('checkAdminAccess');
 

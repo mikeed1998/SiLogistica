@@ -29,7 +29,8 @@
                                     </div>
                                     <div class="col-lg-3 col-md-3 col-12 py-md-3 py-1 text-md-end text-center">
                                         <button type="button" onclick="activarModal(2)" class="btn btn-outline border-0 boton-menu">
-                                            <img src="{{ asset('img/photos/header/menubg.png') }}" alt="" class="img-fluid">
+                                            {{-- <img src="{{ asset('img/photos/header/menubg.png') }}" alt="" class="img-fluid"> --}}
+                                            <i class="fa-solid fa-bars display-4 py-2" style="width: 100%;"></i>
                                         </button>
                                     </div>
                                 </div>

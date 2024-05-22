@@ -91,7 +91,7 @@
                         <div class="col-md-6 col-12">
                             <div class="row" style="background-color: #3567AC;">
                                 <div class="col-10 text-white py-5 mx-auto display-2 fw-bolder text-end">
-                                    Empresa 100% Mexicana
+                                    {{ $elements[6]->texto }}
                                 </div>
                             </div>
                             <div class="row">
@@ -99,10 +99,8 @@
                                     <div class="row">
                                         <div class="col-10 mx-auto">
                                             <div class="row">
-                                                <div class="col-lg-9 col-12 text-md-end text-center ms-auto py-5" style="line-height: 1; hyphens: auto; text-align: right; font-size: 1rem;">
-                                                    SI LOGISTICA es una empresa 100% mexcicana que nace en 2019, especializandose en logística y transporte de carga, siendo un proveedor que se adecua a las necesidades de los clientes para garantizar la satisfacción de los mismos (desde su recolección hasta el destino final) y asi tener una efectiva cadena de suministros cumpliendo a detalle en tiempo y forma cada uno de los compromisos adquiridos.
-                                                    <br><br>
-                                                    Nuestra experiencia nos ha permitido trabajar con empresas líderes en el mercado en México y en el extranjero. El origen de nuestra motivación está en ofrecer a nuestros clientes soluciones a medida en servicios con caja seca, transportando componentes electrónicos, materia prima, producto terminado, alimnetos veterinarios, consumibles de industria farmacéutica, suplementos alimenticios, equipo médico, refacciones automovilísticas, cargas de alto valor (bolsas, calzado) entre otros. Asi como entregas especificas para el sector gobierno.
+                                                <div class="col-lg-9 col-12 text-md-end text-center ms-auto py-5" style="hyphens: auto; text-align: right; font-size: 1rem;">
+                                                    {{ $elements[7]->texto }}
                                                 </div>
                                             </div>
                                         </div>
@@ -111,7 +109,7 @@
                             </div>
                         </div>
                         <div class="col-md-6 col-12 cont-imagen" style="
-                            background-image: url('{{ asset('img/photos/nosotros/nosotros.png') }}');
+                            background-image: url('{{ asset('img/photos/imagenes_estaticas/'.$elements[8]->imagen) }}');
                         "></div>
                     </div>
                 </div>
@@ -203,7 +201,7 @@
                                 </div>
                                 <div class="row">
                                     <div class="col py-3" style="hyphens: auto; text-align: justify; line-height: 1;">
-                                        Lorem ipsum Lorem ipsum dolor sit amet consectetur adipisicing elit. odit at. Et pariatur sunt adipisci magni. dolor sit amet consectetur adipisicing elit. Inventore neque unde sed eum voluptatem nam? Cum maiores totam officiis repellat?  
+                                        {{ $elements[10]->texto }}
                                     </div>
                                 </div>
                             </div>
@@ -228,7 +226,7 @@
                                 </div>
                                 <div class="row">
                                     <div class="col py-3" style="hyphens: auto; text-align: justify; line-height: 1;">
-                                        Lorem ipsum Lorem ipsum dolor sit amet consectetur adipisicing elit. odit at. Et pariatur sunt adipisci magni. dolor sit amet consectetur adipisicing elit. Inventore neque unde sed eum voluptatem nam? Cum maiores totam officiis repellat?  
+                                        {{ $elements[12]->texto }}
                                     </div>
                                 </div>
                             </div>
@@ -236,7 +234,7 @@
                     </div>
                     <div class="col-6 mx-auto py-2 position-relative" style="z-index: 0;">
                         <div class="col-12 position-absolute bottom-0 start-0" style="z-index: -2;">
-                            <img src="{{ asset('img/photos/nosotros/nosotros_stockchida.png') }}" alt="" class="img-fluid" style="border-bottom-left-radius: 250px; border-bottom-right-radius: 250px;">
+                            <img src="{{ asset('img/photos/imagenes_estaticas/'.$elements[13]->imagen) }}" alt="" class="img-fluid" style="border-bottom-left-radius: 250px; border-bottom-right-radius: 250px;">
                         </div>
                     </div>
                 </div>
@@ -251,21 +249,11 @@
         <div class="container-fluid" style="background-color: #F6F6F6;">
             <div class="row text-center py-5 d-flex align-items-center justify-content-center">
                 <div class="slider-logos">
-                    <div class="col mx-auto">
-                        <img src="{{ asset('img/photos/home/DHL.png') }}" alt="" class="img-fluid p-md-1 p-2" style="width: 100%; height: 3rem; object-fit: contain;">
-                    </div>
-                    <div class="col mx-auto">
-                        <img src="{{ asset('img/photos/home/FEDEX.png') }}" alt="" class="img-fluid p-md-1 p-2" style="width: 100%; height: 3rem; object-fit: contain;">
-                    </div>
-                    <div class="col mx-auto">
-                        <img src="{{ asset('img/photos/home/REDPACK.png') }}" alt="" class="img-fluid p-md-1 p-2" style="width: 100%; height: 3rem; object-fit: contain;">
-                    </div>
-                    <div class="col mx-auto">
-                        <img src="{{ asset('img/photos/home/REDPACK.png') }}" alt="" class="img-fluid p-md-1 p-2" style="width: 100%; height: 3rem; object-fit: contain;">
-                    </div>
-                    <div class="col mx-auto">
-                        <img src="{{ asset('img/photos/home/REDPACK.png') }}" alt="" class="img-fluid p-md-1 p-2" style="width: 100%; height: 3rem; object-fit: contain;">
-                    </div>
+                    @foreach ($empresas as $e)
+                        <div class="col mx-auto">
+                            <img src="{{ asset('img/photos/empresas/'.$e->imagen) }}" alt="" class="img-fluid p-md-1 p-2" style="width: 100%; height: 3rem; object-fit: contain;">
+                        </div>
+                    @endforeach
                 </div>
             </div>
         </div>

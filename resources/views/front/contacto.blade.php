@@ -97,7 +97,7 @@
                                         <div class="row">
                                             <div class="col-lg-6 col-md-9 col-12 mx-auto position-relative contenedor-imagen">
                                                 <div class="col-12 position-absolute top-0 start-0 imagen-interna" style="
-                                                    background-image: url('{{ asset('img/photos/contacto/contacto.png') }}');">
+                                                    background-image: url('{{ asset('img/photos/imagenes_estaticas/'.$elements[15]->imagen) }}');">
                                                 </div>
                                             </div>
                                             <div class="col-lg-6 col-md-9 col-12 mx-auto ms-auto px-0">
@@ -119,16 +119,23 @@
                                                     </div>
                                                 </form>
                                                 <div class="row">
+                                                    <div class="col-md-6 col-12">
+                                                        <div class="row mt-4">
+                                                            <div class="col-md-11 col-12">
+                                                                <input type="submit" class="btn btn-dark w-100 rounded-0 text-white" value="Enviar">
+                                                            </div>
+                                                        </div>
+                                                    </div>
                                                     <div class="col-md-6 col-12 ms-auto px-0">
                                                         <div class="row mt-4">
                                                             <div class="col-6 mx-auto text-end">
-                                                                <a href="#/" class="text-decoration-none px-1">
+                                                                <a href="http://wa.me/{{ $config->whatsapp }}" class="text-decoration-none px-1">
                                                                     <i class="bi bi-whatsapp text-dark fs-4"></i>
                                                                 </a>
-                                                                <a href="#/" class="text-decoration-none px-1">
+                                                                <a href="{{ $config->facebook }}" class="text-decoration-none px-1">
                                                                     <i class="bi bi-facebook text-dark fs-4"></i>
                                                                 </a>
-                                                                <a href="#/" class="text-decoration-none px-1">
+                                                                <a href="{{ $config->instagram }}" class="text-decoration-none px-1">
                                                                     <i class="bi bi-instagram text-dark fs-4"></i>
                                                                 </a>
                                                             </div>
@@ -150,22 +157,22 @@
                                 <div class="row d-flex align-items-center justify-content-center">
                                     <div class="col-lg-4 col-md-10 col-12 mx-auto">
                                         <div class="row">
-                                            <div class="col-lg-11 col-12 mx-auto py-lg-0 py-2">
-                                                <i class="bi bi-envelope-fill"></i> contacto@silogistica.com
+                                            <div class="col-lg-12 col-12 mx-auto py-lg-0 py-2">
+                                                <i class="bi bi-envelope-fill"></i> {{ $config->destinatario }}
                                             </div>
                                         </div>
                                     </div>
                                     <div class="col-lg-4 col-md-10 col-12 mx-auto">
                                         <div class="row">
                                             <div class="col-lg-11 col-12 mx-auto py-lg-0 py-2">
-                                                <i class="bi bi-telephone-fill"></i> TEL. 3329768968
+                                                <i class="bi bi-telephone-fill"></i> TEL. {{ $config->whatsapp }}
                                             </div>
                                         </div>
                                     </div>
                                     <div class="col-lg-4 col-md-9 col-12 mx-auto">
                                         <div class="row">
                                             <div class="col-lg-11 col-12 ms-auto text-lg-end text-center py-md-0 py-2">
-                                                Av. Lazáro Cárdenas #33097 Chapalita C.P. 44500 Guadalajara, Jal.
+                                                {{ $config->direccion }}
                                             </div>
                                         </div>
                                     </div>
