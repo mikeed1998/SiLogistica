@@ -5,6 +5,8 @@ namespace App\Http\Controllers;
 use Illuminate\Http\Request;
 use App\Configuracion;
 use App\Servicio;
+use App\User;
+use Auth;
 
 class HomeController extends Controller
 {
@@ -25,9 +27,11 @@ class HomeController extends Controller
      */
     public function index()
     {
+        $user_id = Auth::user()->id;
         $config = Configuracion::first();
         $servicios = Servicio::all();
+        $usuario = User::find($user_id);
 
-        return view('user.home', compact('config', 'servicios'));
+        return view('user.home', compact('config', 'servicios', 'usuario'));
     }
 }
