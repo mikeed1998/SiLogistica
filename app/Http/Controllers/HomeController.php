@@ -3,6 +3,8 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
+use App\Configuracion;
+use App\Servicio;
 
 class HomeController extends Controller
 {
@@ -23,6 +25,9 @@ class HomeController extends Controller
      */
     public function index()
     {
-        return view('user.home');
+        $config = Configuracion::first();
+        $servicios = Servicio::all();
+
+        return view('user.home', compact('config', 'servicios'));
     }
 }
